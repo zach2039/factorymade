@@ -36,7 +36,7 @@ pipeline {
             archive 'build/libs/**.jar'
 			withCredentials([string(credentialsId: "oldguns-discord-webhook", variable: '$discordWebhookSecret')]) {
 				discordSend description: "**Status:** " + currentBuild.currentResult.toLowerCase() + "\n**Branch:** ${BRANCH_NAME}\n**Build:** ${BUILD_NUMBER}\n**Changes:** ${RUN_CHANGES_DISPLAY_URL}\n",
-					title: "Old Guns", 
+					title: "Factory Made", 
 					link: env.BUILD_URL,
 					result: currentBuild.currentResult,
 					webhookURL: "$discordWebhook"
