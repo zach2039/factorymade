@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "factorymade:block/green_cinder_block_bricks"
+  }
+}

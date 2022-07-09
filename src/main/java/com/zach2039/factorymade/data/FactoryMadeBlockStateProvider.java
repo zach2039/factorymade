@@ -188,35 +188,84 @@ public class FactoryMadeBlockStateProvider extends BlockStateProvider {
 			simpleBlockItem(block);
 		}
 		
-		// White Cinder Block Bricks
+		// Cinder Block Bricks
 		{
-			Block block = ModBlocks.WHITE_CINDER_BLOCK_BRICKS.get();
-			StairBlock stair = ModBlocks.WHITE_CINDER_BLOCK_BRICKS_STAIRS.get();
-			SlabBlock slab = ModBlocks.WHITE_CINDER_BLOCK_BRICKS_SLAB.get();
+			blockStairSlab(
+					ModBlocks.WHITE_CINDER_BLOCK_BRICKS.get(),
+					ModBlocks.WHITE_CINDER_BLOCK_BRICKS_STAIRS.get(),
+					ModBlocks.WHITE_CINDER_BLOCK_BRICKS_SLAB.get()
+					);
 			
-			simpleBlock(block);
-			simpleBlockItem(block);
+			blockStairSlab(
+					ModBlocks.YELLOW_CINDER_BLOCK_BRICKS.get(),
+					ModBlocks.YELLOW_CINDER_BLOCK_BRICKS_STAIRS.get(),
+					ModBlocks.YELLOW_CINDER_BLOCK_BRICKS_SLAB.get()
+					);
 			
-			stairsBlock(stair, modLoc("block/white_cinder_block_bricks"));
-			simpleBlockItem(stair);
+			blockStairSlab(
+					ModBlocks.RED_CINDER_BLOCK_BRICKS.get(),
+					ModBlocks.RED_CINDER_BLOCK_BRICKS_STAIRS.get(),
+					ModBlocks.RED_CINDER_BLOCK_BRICKS_SLAB.get()
+					);
 			
-			slabBlock(slab, modLoc("block/white_cinder_block_bricks"), modLoc("block/white_cinder_block_bricks"));
-			simpleBlockItem(slab);
+			blockStairSlab(
+					ModBlocks.BLUE_CINDER_BLOCK_BRICKS.get(),
+					ModBlocks.BLUE_CINDER_BLOCK_BRICKS_STAIRS.get(),
+					ModBlocks.BLUE_CINDER_BLOCK_BRICKS_SLAB.get()
+					);
+			
+			blockStairSlab(
+					ModBlocks.GREEN_CINDER_BLOCK_BRICKS.get(),
+					ModBlocks.GREEN_CINDER_BLOCK_BRICKS_STAIRS.get(),
+					ModBlocks.GREEN_CINDER_BLOCK_BRICKS_SLAB.get()
+					);
+			
+			blockStairSlab(
+					ModBlocks.BROWN_CINDER_BLOCK_BRICKS.get(),
+					ModBlocks.BROWN_CINDER_BLOCK_BRICKS_STAIRS.get(),
+					ModBlocks.BROWN_CINDER_BLOCK_BRICKS_SLAB.get()
+					);
 		}
 		
-		// Black Asbestos Tiles
+		// Concrete Siding
 		{
-			Block block = ModBlocks.BLACK_ASBESTOS_TILES.get();
-			StairBlock stair = ModBlocks.BLACK_ASBESTOS_TILES_STAIRS.get();
-			SlabBlock slab = ModBlocks.BLACK_ASBESTOS_TILES_SLAB.get();
+			blockStairSlab(
+					ModBlocks.CONCRETE_SIDING.get(),
+					ModBlocks.CONCRETE_SIDING_STAIRS.get(),
+					ModBlocks.CONCRETE_SIDING_SLAB.get()
+					);
+			
+			blockStairSlab(
+					ModBlocks.WEATHERED_CONCRETE_SIDING.get(),
+					ModBlocks.WEATHERED_CONCRETE_SIDING_STAIRS.get(),
+					ModBlocks.WEATHERED_CONCRETE_SIDING_SLAB.get()
+					);
+		}
+		
+		// Asbestos Tiles
+		{
+			blockStairSlab(
+					ModBlocks.BLACK_ASBESTOS_TILES.get(),
+					ModBlocks.BLACK_ASBESTOS_TILES_STAIRS.get(),
+					ModBlocks.BLACK_ASBESTOS_TILES_SLAB.get()
+					);
+			
+			blockStairSlab(
+					ModBlocks.WHITE_ASBESTOS_TILES.get(),
+					ModBlocks.WHITE_ASBESTOS_TILES_STAIRS.get(),
+					ModBlocks.WHITE_ASBESTOS_TILES_SLAB.get()
+					);
+		}
+		
+		// Fluorescent Light Panel
+		{
+			Block block = ModBlocks.FLUORESCENT_LIGHT_PANEL.get();
+			SlabBlock slab = ModBlocks.FLUORESCENT_LIGHT_PANEL_SLAB.get();
 			
 			simpleBlock(block);
 			simpleBlockItem(block);
 			
-			stairsBlock(stair, modLoc("block/black_asbestos_tiles"));
-			simpleBlockItem(stair);
-			
-			slabBlock(slab, modLoc("block/black_asbestos_tiles"), modLoc("block/black_asbestos_tiles"));
+			slabBlock(slab, modLoc("block/fluorescent_light_panel"), modLoc("block/fluorescent_light_panel"));
 			simpleBlockItem(slab);
 		}
 	}
@@ -325,6 +374,17 @@ public class FactoryMadeBlockStateProvider extends BlockStateProvider {
 		simpleBlock(block, model);
 	}
 
+	private void blockStairSlab(final Block block, final StairBlock stair, final SlabBlock slab) {		
+		simpleBlock(block);
+		simpleBlockItem(block);
+		
+		stairsBlock(stair, blockTexture(block));
+		simpleBlockItem(stair);
+		
+		slabBlock(slab, blockTexture(block), blockTexture(block));
+		simpleBlockItem(slab);
+	}
+	
 	private int getRotationX(final Direction direction) {
 		return direction == Direction.DOWN ? 90 : direction.getAxis().isHorizontal() ? 0 : -90;
 	}

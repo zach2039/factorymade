@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "factorymade:block/fluorescent_light_panel_slab"
+    },
+    "type=double": {
+      "model": "factorymade:block/fluorescent_light_panel"
+    },
+    "type=top": {
+      "model": "factorymade:block/fluorescent_light_panel_slab_top"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "type": "factorymade:industrial_shaper",
+  "count": 2,
+  "ingredient": {
+    "item": "minecraft:glowstone"
+  },
+  "result": "factorymade:fluorescent_light_panel"
+}

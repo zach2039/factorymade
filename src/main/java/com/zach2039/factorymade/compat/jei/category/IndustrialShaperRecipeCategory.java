@@ -2,6 +2,7 @@ package com.zach2039.factorymade.compat.jei.category;
 
 import com.zach2039.factorymade.FactoryMade;
 import com.zach2039.factorymade.compat.jei.JEIRecipeTypes;
+import com.zach2039.factorymade.init.ModBlocks;
 import com.zach2039.factorymade.world.item.crafting.recipe.IndustrialShaperRecipe;
 
 import mezz.jei.api.constants.ModIds;
@@ -31,7 +32,7 @@ public class IndustrialShaperRecipeCategory implements IRecipeCategory<Industria
 	public IndustrialShaperRecipeCategory(IGuiHelper guiHelper) {
 		ResourceLocation location = new ResourceLocation(ModIds.JEI_ID, "textures/gui/gui_vanilla.png");
 		background = guiHelper.createDrawable(location, 0, 220, width, height);
-		icon = guiHelper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(Blocks.STONECUTTER));
+		icon = guiHelper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(ModBlocks.INDUSTRIAL_SHAPER.get()));
 		localizedName = Component.translatable("block.factorymade.industrial_shaper");
 	}
 

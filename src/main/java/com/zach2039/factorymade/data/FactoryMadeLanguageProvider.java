@@ -80,9 +80,44 @@ public class FactoryMadeLanguageProvider extends LanguageProvider {
 		addBlock(ModBlocks.WHITE_CINDER_BLOCK_BRICKS_STAIRS, "White Cinder Block Bricks Stairs");
 		addBlock(ModBlocks.WHITE_CINDER_BLOCK_BRICKS_SLAB, "White Cinder Block Bricks Slab");
 		
+		addBlock(ModBlocks.YELLOW_CINDER_BLOCK_BRICKS, "Yellow Cinder Block Bricks");
+		addBlock(ModBlocks.YELLOW_CINDER_BLOCK_BRICKS_STAIRS, "Yellow Cinder Block Bricks Stairs");
+		addBlock(ModBlocks.YELLOW_CINDER_BLOCK_BRICKS_SLAB, "Yellow Cinder Block Bricks Slab");
+		
+		addBlock(ModBlocks.RED_CINDER_BLOCK_BRICKS, "Red Cinder Block Bricks");
+		addBlock(ModBlocks.RED_CINDER_BLOCK_BRICKS_STAIRS, "Red Cinder Block Bricks Stairs");
+		addBlock(ModBlocks.RED_CINDER_BLOCK_BRICKS_SLAB, "Red Cinder Block Bricks Slab");
+		
+		addBlock(ModBlocks.BLUE_CINDER_BLOCK_BRICKS, "Blue Cinder Block Bricks");
+		addBlock(ModBlocks.BLUE_CINDER_BLOCK_BRICKS_STAIRS, "Blue Cinder Block Bricks Stairs");
+		addBlock(ModBlocks.BLUE_CINDER_BLOCK_BRICKS_SLAB, "Blue Cinder Block Bricks Slab");
+		
+		addBlock(ModBlocks.GREEN_CINDER_BLOCK_BRICKS, "Green Cinder Block Bricks");
+		addBlock(ModBlocks.GREEN_CINDER_BLOCK_BRICKS_STAIRS, "Green Cinder Block Bricks Stairs");
+		addBlock(ModBlocks.GREEN_CINDER_BLOCK_BRICKS_SLAB, "Green Cinder Block Bricks Slab");
+		
+		addBlock(ModBlocks.BROWN_CINDER_BLOCK_BRICKS, "Brown Cinder Block Bricks");
+		addBlock(ModBlocks.BROWN_CINDER_BLOCK_BRICKS_STAIRS, "Brown Cinder Block Bricks Stairs");
+		addBlock(ModBlocks.BROWN_CINDER_BLOCK_BRICKS_SLAB, "Brown Cinder Block Bricks Slab");
+		
+		addBlock(ModBlocks.CONCRETE_SIDING, "Concrete Siding");
+		addBlock(ModBlocks.CONCRETE_SIDING_STAIRS, "Concrete Siding Stairs");
+		addBlock(ModBlocks.CONCRETE_SIDING_SLAB, "Concrete Siding Slab");
+		
+		addBlock(ModBlocks.WEATHERED_CONCRETE_SIDING, "Weathered Concrete Siding");
+		addBlock(ModBlocks.WEATHERED_CONCRETE_SIDING_STAIRS, "Weathered Concrete Siding Stairs");
+		addBlock(ModBlocks.WEATHERED_CONCRETE_SIDING_SLAB, "Weathered Concrete Siding Slab");
+		
 		addBlock(ModBlocks.BLACK_ASBESTOS_TILES, "Black Asbestos Tiles");
 		addBlock(ModBlocks.BLACK_ASBESTOS_TILES_STAIRS, "Black Asbestos Tiles Stairs");
 		addBlock(ModBlocks.BLACK_ASBESTOS_TILES_SLAB, "Black Asbestos Tiles Slab");
+		
+		addBlock(ModBlocks.WHITE_ASBESTOS_TILES, "White Asbestos Tiles");
+		addBlock(ModBlocks.WHITE_ASBESTOS_TILES_STAIRS, "White Asbestos Tiles Stairs");
+		addBlock(ModBlocks.WHITE_ASBESTOS_TILES_SLAB, "White Asbestos Tiles Slab");
+		
+		addBlock(ModBlocks.FLUORESCENT_LIGHT_PANEL, "Fluorescent Light Panel");
+		addBlock(ModBlocks.FLUORESCENT_LIGHT_PANEL_SLAB, "Fluorescent Light Panel Slab");
 	}
 
 	private void addItems() {

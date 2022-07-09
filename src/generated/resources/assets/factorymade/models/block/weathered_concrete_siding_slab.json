@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "factorymade:block/weathered_concrete_siding",
+    "side": "factorymade:block/weathered_concrete_siding",
+    "top": "factorymade:block/weathered_concrete_siding"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "type": "factorymade:industrial_shaper",
+  "count": 4,
+  "ingredient": {
+    "item": "minecraft:yellow_concrete"
+  },
+  "result": "factorymade:yellow_cinder_block_bricks"
+}

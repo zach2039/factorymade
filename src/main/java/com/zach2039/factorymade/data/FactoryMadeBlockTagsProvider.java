@@ -46,9 +46,44 @@ public class FactoryMadeBlockTagsProvider extends BlockTagsProvider {
 				.add(ModBlocks.WHITE_CINDER_BLOCK_BRICKS_STAIRS.get())
 				.add(ModBlocks.WHITE_CINDER_BLOCK_BRICKS_SLAB.get())
 				
+				.add(ModBlocks.YELLOW_CINDER_BLOCK_BRICKS.get())
+				.add(ModBlocks.YELLOW_CINDER_BLOCK_BRICKS_STAIRS.get())
+				.add(ModBlocks.YELLOW_CINDER_BLOCK_BRICKS_SLAB.get())
+				
+				.add(ModBlocks.RED_CINDER_BLOCK_BRICKS.get())
+				.add(ModBlocks.RED_CINDER_BLOCK_BRICKS_STAIRS.get())
+				.add(ModBlocks.RED_CINDER_BLOCK_BRICKS_SLAB.get())
+				
+				.add(ModBlocks.BLUE_CINDER_BLOCK_BRICKS.get())
+				.add(ModBlocks.BLUE_CINDER_BLOCK_BRICKS_STAIRS.get())
+				.add(ModBlocks.BLUE_CINDER_BLOCK_BRICKS_SLAB.get())
+				
+				.add(ModBlocks.GREEN_CINDER_BLOCK_BRICKS.get())
+				.add(ModBlocks.GREEN_CINDER_BLOCK_BRICKS_STAIRS.get())
+				.add(ModBlocks.GREEN_CINDER_BLOCK_BRICKS_SLAB.get())
+				
+				.add(ModBlocks.BROWN_CINDER_BLOCK_BRICKS.get())
+				.add(ModBlocks.BROWN_CINDER_BLOCK_BRICKS_STAIRS.get())
+				.add(ModBlocks.BROWN_CINDER_BLOCK_BRICKS_SLAB.get())
+				
+				.add(ModBlocks.CONCRETE_SIDING.get())
+				.add(ModBlocks.CONCRETE_SIDING_STAIRS.get())
+				.add(ModBlocks.CONCRETE_SIDING_SLAB.get())
+				
+				.add(ModBlocks.WEATHERED_CONCRETE_SIDING.get())
+				.add(ModBlocks.WEATHERED_CONCRETE_SIDING_STAIRS.get())
+				.add(ModBlocks.WEATHERED_CONCRETE_SIDING_SLAB.get())
+				
 				.add(ModBlocks.BLACK_ASBESTOS_TILES.get())
 				.add(ModBlocks.BLACK_ASBESTOS_TILES_STAIRS.get())
 				.add(ModBlocks.BLACK_ASBESTOS_TILES_SLAB.get())
+				
+				.add(ModBlocks.WHITE_ASBESTOS_TILES.get())
+				.add(ModBlocks.WHITE_ASBESTOS_TILES_STAIRS.get())
+				.add(ModBlocks.WHITE_ASBESTOS_TILES_SLAB.get())
+				
+				.add(ModBlocks.FLUORESCENT_LIGHT_PANEL.get())
+				.add(ModBlocks.FLUORESCENT_LIGHT_PANEL_SLAB.get())
 				;
 		
 		tag(BlockTags.MINEABLE_WITH_AXE)

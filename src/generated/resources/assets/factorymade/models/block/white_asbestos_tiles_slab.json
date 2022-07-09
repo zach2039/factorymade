@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "factorymade:block/white_asbestos_tiles",
+    "side": "factorymade:block/white_asbestos_tiles",
+    "top": "factorymade:block/white_asbestos_tiles"
+  }
+}

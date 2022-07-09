@@ -22,7 +22,7 @@ Blocks for your next industrial style build.
     ordering="NONE"
     side="BOTH"
 [[dependencies.factorymade]]
-    modId="rei"
+    modId="jei"
     mandatory=false
     versionRange="[1.19,)"
     ordering="NONE"

@@ -1,0 +1,8 @@
+{
+  "type": "factorymade:industrial_shaper",
+  "count": 1,
+  "ingredient": {
+    "item": "factorymade:white_asbestos_tiles"
+  },
+  "result": "factorymade:white_asbestos_tiles_stairs"
+}

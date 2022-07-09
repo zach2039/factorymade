@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "factorymade:block/concrete_siding_slab"
+    },
+    "type=double": {
+      "model": "factorymade:block/concrete_siding"
+    },
+    "type=top": {
+      "model": "factorymade:block/concrete_siding_slab_top"
+    }
+  }
+}

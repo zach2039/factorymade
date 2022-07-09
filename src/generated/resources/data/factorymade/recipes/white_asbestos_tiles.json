@@ -1,0 +1,8 @@
+{
+  "type": "factorymade:industrial_shaper",
+  "count": 4,
+  "ingredient": {
+    "item": "minecraft:white_concrete"
+  },
+  "result": "factorymade:white_asbestos_tiles"
+}

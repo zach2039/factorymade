@@ -1,0 +1,8 @@
+{
+  "type": "factorymade:industrial_shaper",
+  "count": 2,
+  "ingredient": {
+    "item": "factorymade:green_cinder_block_bricks"
+  },
+  "result": "factorymade:green_cinder_block_bricks_slab"
+}

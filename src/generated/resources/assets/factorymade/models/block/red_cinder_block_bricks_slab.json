@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "factorymade:block/red_cinder_block_bricks",
+    "side": "factorymade:block/red_cinder_block_bricks",
+    "top": "factorymade:block/red_cinder_block_bricks"
+  }
+}
