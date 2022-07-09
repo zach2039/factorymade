@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "factorymade:block/white_cinder_block_bricks",
+    "side": "factorymade:block/white_cinder_block_bricks",
+    "top": "factorymade:block/white_cinder_block_bricks"
+  }
+}

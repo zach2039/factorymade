@@ -75,6 +75,14 @@ public class FactoryMadeLanguageProvider extends LanguageProvider {
 		
 		addBlock(ModBlocks.IRON_TRUSS, "Iron Truss");
 		addBlock(ModBlocks.RUSTED_IRON_TRUSS, "Rusted Iron Truss");
+		
+		addBlock(ModBlocks.WHITE_CINDER_BLOCK_BRICKS, "White Cinder Block Bricks");
+		addBlock(ModBlocks.WHITE_CINDER_BLOCK_BRICKS_STAIRS, "White Cinder Block Bricks Stairs");
+		addBlock(ModBlocks.WHITE_CINDER_BLOCK_BRICKS_SLAB, "White Cinder Block Bricks Slab");
+		
+		addBlock(ModBlocks.BLACK_ASBESTOS_TILES, "Black Asbestos Tiles");
+		addBlock(ModBlocks.BLACK_ASBESTOS_TILES_STAIRS, "Black Asbestos Tiles Stairs");
+		addBlock(ModBlocks.BLACK_ASBESTOS_TILES_SLAB, "Black Asbestos Tiles Slab");
 	}
 
 	private void addItems() {

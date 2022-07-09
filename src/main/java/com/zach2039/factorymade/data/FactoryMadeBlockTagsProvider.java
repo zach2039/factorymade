@@ -29,14 +29,26 @@ public class FactoryMadeBlockTagsProvider extends BlockTagsProvider {
 		
 		tag(BlockTags.MINEABLE_WITH_PICKAXE)
 				.add(ModBlocks.INDUSTRIAL_SHAPER.get())
+				
 				.add(ModBlocks.IRON_NON_SLIP_WALKWAY.get())
 				.add(ModBlocks.IRON_NON_SLIP_WALKWAY_STAIRS.get())
 				.add(ModBlocks.IRON_NON_SLIP_WALKWAY_SLAB.get())
+				
 				.add(ModBlocks.RUSTED_IRON_NON_SLIP_WALKWAY.get())
 				.add(ModBlocks.RUSTED_IRON_NON_SLIP_WALKWAY_STAIRS.get())
 				.add(ModBlocks.RUSTED_IRON_NON_SLIP_WALKWAY_SLAB.get())
+				
 				.add(ModBlocks.IRON_TRUSS.get())
+				
 				.add(ModBlocks.RUSTED_IRON_TRUSS.get())
+				
+				.add(ModBlocks.WHITE_CINDER_BLOCK_BRICKS.get())
+				.add(ModBlocks.WHITE_CINDER_BLOCK_BRICKS_STAIRS.get())
+				.add(ModBlocks.WHITE_CINDER_BLOCK_BRICKS_SLAB.get())
+				
+				.add(ModBlocks.BLACK_ASBESTOS_TILES.get())
+				.add(ModBlocks.BLACK_ASBESTOS_TILES_STAIRS.get())
+				.add(ModBlocks.BLACK_ASBESTOS_TILES_SLAB.get())
 				;
 		
 		tag(BlockTags.MINEABLE_WITH_AXE)

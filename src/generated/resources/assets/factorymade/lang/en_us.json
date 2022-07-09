@@ -1,4 +1,7 @@
 {
+  "block.factorymade.black_asbestos_tiles": "Black Asbestos Tiles",
+  "block.factorymade.black_asbestos_tiles_slab": "Black Asbestos Tiles Slab",
+  "block.factorymade.black_asbestos_tiles_stairs": "Black Asbestos Tiles Stairs",
   "block.factorymade.industrial_shaper": "Industrial Shaper",
   "block.factorymade.iron_non_slip_walkway": "Iron Non-Slip Walkway",
   "block.factorymade.iron_non_slip_walkway_slab": "Iron Non-Slip Walkway Slab",
@@ -8,6 +11,9 @@
   "block.factorymade.rusted_iron_non_slip_walkway_slab": "Rusted Iron Non-Slip Walkway Slab",
   "block.factorymade.rusted_iron_non_slip_walkway_stairs": "Rusted Iron Non-Slip Walkway Stairs",
   "block.factorymade.rusted_iron_truss": "Rusted Iron Truss",
+  "block.factorymade.white_cinder_block_bricks": "White Cinder Block Bricks",
+  "block.factorymade.white_cinder_block_bricks_slab": "White Cinder Block Bricks Slab",
+  "block.factorymade.white_cinder_block_bricks_stairs": "White Cinder Block Bricks Stairs",
   "container.industrial_shaper": "Industrial Shaper",
   "itemGroup.factorymade": "Factory Made"
 }

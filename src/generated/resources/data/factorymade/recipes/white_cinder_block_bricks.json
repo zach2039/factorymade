@@ -1,0 +1,8 @@
+{
+  "type": "factorymade:industrial_shaper",
+  "count": 16,
+  "ingredient": {
+    "item": "minecraft:white_concrete"
+  },
+  "result": "factorymade:white_cinder_block_bricks"
+}

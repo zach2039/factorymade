@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "factorymade:block/white_cinder_block_bricks_slab"
+    },
+    "type=double": {
+      "model": "factorymade:block/white_cinder_block_bricks"
+    },
+    "type=top": {
+      "model": "factorymade:block/white_cinder_block_bricks_slab_top"
+    }
+  }
+}

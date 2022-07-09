@@ -73,6 +73,24 @@ public class FactoryMadeRecipeProvider extends RecipeProvider {
 						.unlockedBy("has_iron_block", has(Blocks.IRON_BLOCK))
 						.save(recipeConsumer, new ResourceLocation(FactoryMade.MODID, "rusted_iron_truss"));			
 		}
+		
+		// White Cinder Block Bricks
+		{
+			IndustrialShaperRecipeBuilder.industrialshaper(Ingredient.of(Blocks.WHITE_CONCRETE), ModBlocks.WHITE_CINDER_BLOCK_BRICKS.get(), 16)
+						.unlockedBy("has_white_concrete_block", has(Blocks.WHITE_CONCRETE))
+						.save(recipeConsumer, new ResourceLocation(FactoryMade.MODID, "white_cinder_block_bricks"));			
+			addSlabRecipes(recipeConsumer, ModBlocks.WHITE_CINDER_BLOCK_BRICKS.get(), ModBlocks.WHITE_CINDER_BLOCK_BRICKS_SLAB.get());
+			addStairRecipes(recipeConsumer, ModBlocks.WHITE_CINDER_BLOCK_BRICKS.get(), ModBlocks.WHITE_CINDER_BLOCK_BRICKS_STAIRS.get());
+		}
+		
+		// Black Asbestos Tiles
+		{
+			IndustrialShaperRecipeBuilder.industrialshaper(Ingredient.of(Blocks.BLACK_CONCRETE), ModBlocks.BLACK_ASBESTOS_TILES.get(), 16)
+						.unlockedBy("has_black_concrete_block", has(Blocks.BLACK_CONCRETE))
+						.save(recipeConsumer, new ResourceLocation(FactoryMade.MODID, "black_asbestos_tiles"));			
+			addSlabRecipes(recipeConsumer, ModBlocks.BLACK_ASBESTOS_TILES.get(), ModBlocks.BLACK_ASBESTOS_TILES_SLAB.get());
+			addStairRecipes(recipeConsumer, ModBlocks.BLACK_ASBESTOS_TILES.get(), ModBlocks.BLACK_ASBESTOS_TILES_STAIRS.get());
+		}
 	}
 
 	private void addSlabRecipes(final Consumer<FinishedRecipe> recipeConsumer, Block inputBlock, SlabBlock outputSlab) {

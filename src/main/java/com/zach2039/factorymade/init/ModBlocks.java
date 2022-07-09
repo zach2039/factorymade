@@ -53,6 +53,14 @@ public class ModBlocks {
 	public static final RegistryObject<RotatedPillarBlock> IRON_TRUSS = registerBlock("iron_truss", () -> ModBlockInstances.IRON_TRUSS);
 	public static final RegistryObject<RotatedPillarBlock> RUSTED_IRON_TRUSS = registerBlock("rusted_iron_truss", () -> ModBlockInstances.RUSTED_IRON_TRUSS);
 	
+	public static final RegistryObject<Block> WHITE_CINDER_BLOCK_BRICKS = registerBlock("white_cinder_block_bricks", () -> ModBlockInstances.WHITE_CINDER_BLOCK_BRICKS);
+	public static final RegistryObject<StairBlock> WHITE_CINDER_BLOCK_BRICKS_STAIRS = registerBlock("white_cinder_block_bricks_stairs", () -> ModBlockInstances.WHITE_CINDER_BLOCK_BRICKS_STAIRS);
+	public static final RegistryObject<SlabBlock> WHITE_CINDER_BLOCK_BRICKS_SLAB = registerBlock("white_cinder_block_bricks_slab", () -> ModBlockInstances.WHITE_CINDER_BLOCK_BRICKS_SLAB);
+	
+	public static final RegistryObject<Block> BLACK_ASBESTOS_TILES = registerBlock("black_asbestos_tiles", () -> ModBlockInstances.BLACK_ASBESTOS_TILES);
+	public static final RegistryObject<StairBlock> BLACK_ASBESTOS_TILES_STAIRS = registerBlock("black_asbestos_tiles_stairs", () -> ModBlockInstances.BLACK_ASBESTOS_TILES_STAIRS);
+	public static final RegistryObject<SlabBlock> BLACK_ASBESTOS_TILES_SLAB = registerBlock("black_asbestos_tiles_slab", () -> ModBlockInstances.BLACK_ASBESTOS_TILES_SLAB);
+	
 	/**
 	 * Registers the {@link DeferredRegister} instances with the mod event bus.
 	 * <p>
@@ -136,6 +144,8 @@ public class ModBlocks {
 	
 	private class ModBlockInstances {
 		private static final BlockBehaviour.Properties LIGHT_IRON_PROPS = BlockBehaviour.Properties.of(Material.METAL, MaterialColor.METAL).strength(3.0F, 4.0F).requiresCorrectToolForDrops().sound(SoundType.COPPER);
+		private static final BlockBehaviour.Properties CINDER_BLOCK_PROPS = BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE).strength(1.5F, 2.0F).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE_BRICKS);
+		private static final BlockBehaviour.Properties CERAMIC_TILES_PROPS = BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE).strength(1.0F, 2.0F).requiresCorrectToolForDrops().sound(SoundType.STONE);
 		
 		public static final Block IRON_NON_SLIP_WALKWAY = new Block(LIGHT_IRON_PROPS);
 		public static final StairBlock IRON_NON_SLIP_WALKWAY_STAIRS = new StairBlock(() -> {return IRON_NON_SLIP_WALKWAY.defaultBlockState();}, BlockBehaviour.Properties.copy(IRON_NON_SLIP_WALKWAY));
@@ -147,5 +157,13 @@ public class ModBlocks {
 		
 		public static final RotatedPillarBlock IRON_TRUSS = new RotatedPillarBlock(LIGHT_IRON_PROPS);
 		public static final RotatedPillarBlock RUSTED_IRON_TRUSS = new RotatedPillarBlock(LIGHT_IRON_PROPS);
+		
+		public static final Block WHITE_CINDER_BLOCK_BRICKS = new Block(CINDER_BLOCK_PROPS);
+		public static final StairBlock WHITE_CINDER_BLOCK_BRICKS_STAIRS = new StairBlock(() -> {return WHITE_CINDER_BLOCK_BRICKS.defaultBlockState();}, BlockBehaviour.Properties.copy(WHITE_CINDER_BLOCK_BRICKS));
+		public static final SlabBlock WHITE_CINDER_BLOCK_BRICKS_SLAB = new SlabBlock(BlockBehaviour.Properties.copy(WHITE_CINDER_BLOCK_BRICKS));
+		
+		public static final Block BLACK_ASBESTOS_TILES = new Block(CERAMIC_TILES_PROPS);
+		public static final StairBlock BLACK_ASBESTOS_TILES_STAIRS = new StairBlock(() -> {return BLACK_ASBESTOS_TILES.defaultBlockState();}, BlockBehaviour.Properties.copy(BLACK_ASBESTOS_TILES));
+		public static final SlabBlock BLACK_ASBESTOS_TILES_SLAB = new SlabBlock(BlockBehaviour.Properties.copy(BLACK_ASBESTOS_TILES));
 	}
 }

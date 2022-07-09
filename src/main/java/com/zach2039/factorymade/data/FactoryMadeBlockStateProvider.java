@@ -187,6 +187,38 @@ public class FactoryMadeBlockStateProvider extends BlockStateProvider {
 			axisBlock(block, model, model);
 			simpleBlockItem(block);
 		}
+		
+		// White Cinder Block Bricks
+		{
+			Block block = ModBlocks.WHITE_CINDER_BLOCK_BRICKS.get();
+			StairBlock stair = ModBlocks.WHITE_CINDER_BLOCK_BRICKS_STAIRS.get();
+			SlabBlock slab = ModBlocks.WHITE_CINDER_BLOCK_BRICKS_SLAB.get();
+			
+			simpleBlock(block);
+			simpleBlockItem(block);
+			
+			stairsBlock(stair, modLoc("block/white_cinder_block_bricks"));
+			simpleBlockItem(stair);
+			
+			slabBlock(slab, modLoc("block/white_cinder_block_bricks"), modLoc("block/white_cinder_block_bricks"));
+			simpleBlockItem(slab);
+		}
+		
+		// Black Asbestos Tiles
+		{
+			Block block = ModBlocks.BLACK_ASBESTOS_TILES.get();
+			StairBlock stair = ModBlocks.BLACK_ASBESTOS_TILES_STAIRS.get();
+			SlabBlock slab = ModBlocks.BLACK_ASBESTOS_TILES_SLAB.get();
+			
+			simpleBlock(block);
+			simpleBlockItem(block);
+			
+			stairsBlock(stair, modLoc("block/black_asbestos_tiles"));
+			simpleBlockItem(stair);
+			
+			slabBlock(slab, modLoc("block/black_asbestos_tiles"), modLoc("block/black_asbestos_tiles"));
+			simpleBlockItem(slab);
+		}
 	}
 
 	private void blockstateError(final Block block, final String fmt, final Object... args) {

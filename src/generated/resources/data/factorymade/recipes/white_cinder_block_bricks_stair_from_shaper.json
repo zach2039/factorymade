@@ -1,0 +1,8 @@
+{
+  "type": "factorymade:industrial_shaper",
+  "count": 1,
+  "ingredient": {
+    "item": "factorymade:white_cinder_block_bricks"
+  },
+  "result": "factorymade:white_cinder_block_bricks_stairs"
+}
