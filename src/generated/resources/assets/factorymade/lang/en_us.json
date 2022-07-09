@@ -1,0 +1,13 @@
+{
+  "block.factorymade.industrial_shaper": "Industrial Shaper",
+  "block.factorymade.iron_non_slip_walkway": "Iron Non-Slip Walkway",
+  "block.factorymade.iron_non_slip_walkway_slab": "Iron Non-Slip Walkway Slab",
+  "block.factorymade.iron_non_slip_walkway_stairs": "Iron Non-Slip Walkway Stairs",
+  "block.factorymade.iron_truss": "Iron Truss",
+  "block.factorymade.rusted_iron_non_slip_walkway": "Rusted Iron Non-Slip Walkway",
+  "block.factorymade.rusted_iron_non_slip_walkway_slab": "Rusted Iron Non-Slip Walkway Slab",
+  "block.factorymade.rusted_iron_non_slip_walkway_stairs": "Rusted Iron Non-Slip Walkway Stairs",
+  "block.factorymade.rusted_iron_truss": "Rusted Iron Truss",
+  "container.industrial_shaper": "Industrial Shaper",
+  "itemGroup.factorymade": "Factory Made"
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "factorymade:block/iron_non_slip_walkway_slab"
+    },
+    "type=double": {
+      "model": "factorymade:block/iron_non_slip_walkway"
+    },
+    "type=top": {
+      "model": "factorymade:block/iron_non_slip_walkway_slab_top"
+    }
+  }
+}

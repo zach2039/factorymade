@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "factorymade:block/rusted_iron_non_slip_walkway_slab"
+    },
+    "type=double": {
+      "model": "factorymade:block/rusted_iron_non_slip_walkway"
+    },
+    "type=top": {
+      "model": "factorymade:block/rusted_iron_non_slip_walkway_slab_top"
+    }
+  }
+}

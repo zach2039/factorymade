@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "factorymade:block/industrial_shaper"
+    },
+    "facing=south": {
+      "model": "factorymade:block/industrial_shaper",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "factorymade:block/industrial_shaper",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "factorymade:block/industrial_shaper",
+      "y": 90
+    }
+  }
+}

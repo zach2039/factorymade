@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "factorymade:block/iron_truss",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "factorymade:block/iron_truss"
+    },
+    "axis=z": {
+      "model": "factorymade:block/iron_truss",
+      "x": 90
+    }
+  }
+}

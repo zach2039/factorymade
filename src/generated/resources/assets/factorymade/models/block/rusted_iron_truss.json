@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "factorymade:block/rusted_iron_truss_end",
+    "east": "factorymade:block/rusted_iron_truss_side_flipped",
+    "north": "factorymade:block/rusted_iron_truss_side",
+    "particle": "factorymade:block/rusted_iron_truss_end",
+    "south": "factorymade:block/rusted_iron_truss_side",
+    "up": "factorymade:block/rusted_iron_truss_end",
+    "west": "factorymade:block/rusted_iron_truss_side_flipped"
+  }
+}
