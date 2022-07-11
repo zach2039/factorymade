@@ -1,6 +1,7 @@
 ### v1.19-1.0.3-4
 
- - Add Industrial Wall Light 
+ - Add Industrial Wall Light
+ - Add Iron Plate
 
 ### v1.19-1.0.2-3
 
