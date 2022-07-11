@@ -162,6 +162,19 @@ public class FactoryMadeRecipeProvider extends RecipeProvider {
 						.save(recipeConsumer, new ResourceLocation(FactoryMade.MODID, "fluorescent_light_panel"));			
 			addSlabRecipes(recipeConsumer, ModBlocks.FLUORESCENT_LIGHT_PANEL.get(), ModBlocks.FLUORESCENT_LIGHT_PANEL_SLAB.get());
 		}
+
+		// Industrial Wall Light
+		{
+			ShapedRecipeBuilder.shaped(ModBlocks.INDUSTRIAL_WALL_LIGHT.get(), 2)
+					.pattern("iii")
+					.pattern("ifi")
+					.pattern("iii")
+					.define('i', Ingredient.of(Items.IRON_NUGGET))
+					.define('f', Ingredient.of(ModBlocks.FLUORESCENT_LIGHT_PANEL.get()))
+					.unlockedBy("has_iron_nugget", has(Items.IRON_NUGGET))
+					.unlockedBy("has_fluorescent_light_panel", has(ModBlocks.FLUORESCENT_LIGHT_PANEL.get()))
+					.save(recipeConsumer, new ResourceLocation(FactoryMade.MODID, "industrial_wall_light"));
+		}
 	}
 
 	private void addSlabRecipes(final Consumer<FinishedRecipe> recipeConsumer, Block inputBlock, SlabBlock outputSlab) {

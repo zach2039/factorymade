@@ -7,15 +7,12 @@ import com.google.common.base.Supplier;
 import com.zach2039.factorymade.FactoryMade;
 import com.zach2039.factorymade.world.level.block.IndustrialShaperBlock;
 
+import com.zach2039.factorymade.world.level.block.IndustrialWallLightBlock;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.RotatedPillarBlock;
-import net.minecraft.world.level.block.SlabBlock;
-import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
@@ -95,7 +92,10 @@ public class ModBlocks {
 	
 	public static final RegistryObject<Block> FLUORESCENT_LIGHT_PANEL = registerBlock("fluorescent_light_panel", () -> ModBlockInstances.FLUORESCENT_LIGHT_PANEL);
 	public static final RegistryObject<SlabBlock> FLUORESCENT_LIGHT_PANEL_SLAB = registerBlock("fluorescent_light_panel_slab", () -> ModBlockInstances.FLUORESCENT_LIGHT_PANEL_SLAB);
-	
+
+	public static final RegistryObject<Block> INDUSTRIAL_WALL_LIGHT = registerBlock("industrial_wall_light", () -> ModBlockInstances.INDUSTRIAL_WALL_LIGHT);
+
+
 	/**
 	 * Registers the {@link DeferredRegister} instances with the mod event bus.
 	 * <p>
@@ -184,7 +184,10 @@ public class ModBlocks {
 		private static final BlockBehaviour.Properties FLUORESCENT_LIGHT_PROPS = BlockBehaviour.Properties.of(Material.GLASS, MaterialColor.COLOR_BLUE).strength(0.3F).sound(SoundType.GLASS).lightLevel((blockstate) -> {
 		      return 14;
 		   });
-		
+		private static final BlockBehaviour.Properties INDUSTRIAL_LIGHT_PROPS = BlockBehaviour.Properties.of(Material.METAL).requiresCorrectToolForDrops().strength(3.5F).sound(SoundType.LANTERN).lightLevel((blockState) -> {
+			return 14;
+		}).noOcclusion();
+
 		public static final Block IRON_NON_SLIP_WALKWAY = new Block(LIGHT_IRON_PROPS);
 		public static final StairBlock IRON_NON_SLIP_WALKWAY_STAIRS = new StairBlock(() -> {return IRON_NON_SLIP_WALKWAY.defaultBlockState();}, BlockBehaviour.Properties.copy(IRON_NON_SLIP_WALKWAY));
 		public static final SlabBlock IRON_NON_SLIP_WALKWAY_SLAB = new SlabBlock(BlockBehaviour.Properties.copy(IRON_NON_SLIP_WALKWAY));
@@ -238,5 +241,7 @@ public class ModBlocks {
 		
 		public static final Block FLUORESCENT_LIGHT_PANEL = new Block(FLUORESCENT_LIGHT_PROPS);
 		public static final SlabBlock FLUORESCENT_LIGHT_PANEL_SLAB = new SlabBlock(BlockBehaviour.Properties.copy(FLUORESCENT_LIGHT_PANEL));
+
+		public static final Block INDUSTRIAL_WALL_LIGHT = new IndustrialWallLightBlock(INDUSTRIAL_LIGHT_PROPS);
 	}
 }

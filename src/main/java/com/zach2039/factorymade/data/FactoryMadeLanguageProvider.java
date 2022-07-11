@@ -118,6 +118,8 @@ public class FactoryMadeLanguageProvider extends LanguageProvider {
 		
 		addBlock(ModBlocks.FLUORESCENT_LIGHT_PANEL, "Fluorescent Light Panel");
 		addBlock(ModBlocks.FLUORESCENT_LIGHT_PANEL_SLAB, "Fluorescent Light Panel Slab");
+
+		addBlock(ModBlocks.INDUSTRIAL_WALL_LIGHT, "Industrial Wall Light");
 	}
 
 	private void addItems() {

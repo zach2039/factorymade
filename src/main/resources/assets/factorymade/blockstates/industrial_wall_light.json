@@ -1,0 +1,31 @@
+{
+	"variants": {
+		"hanging=false,facing=south": {
+			"model": "factorymade:block/industrial_wall_light"
+		},
+		"hanging=false,facing=west": {
+			"model": "factorymade:block/industrial_wall_light",
+			"y": 90
+		},
+		"hanging=false,facing=north": {
+			"model": "factorymade:block/industrial_wall_light",
+			"y": 180
+		},
+		"hanging=false,facing=east": {
+			"model": "factorymade:block/industrial_wall_light",
+			"y": 270
+		},
+		"hanging=true,facing=east": {
+			"model": "factorymade:block/industrial_wall_light_hanging"
+		},
+		"hanging=true,facing=south": {
+			"model": "factorymade:block/industrial_wall_light_hanging"
+		},
+		"hanging=true,facing=west": {
+			"model": "factorymade:block/industrial_wall_light_hanging"
+		},
+		"hanging=true,facing=north": {
+			"model": "factorymade:block/industrial_wall_light_hanging"
+		}
+	}
+}

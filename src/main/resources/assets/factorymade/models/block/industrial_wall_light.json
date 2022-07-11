@@ -1,0 +1,66 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "block/block",
+	"textures": {
+		"1": "factorymade:block/industrial_wall_light"
+	},
+	"elements": [
+		{
+			"from": [5, 1, 3],
+			"to": [11, 8, 9],
+			"faces": {
+				"north": {"uv": [10, 0, 16, 7], "texture": "#1"},
+				"east": {"uv": [10, 0, 16, 7], "texture": "#1"},
+				"south": {"uv": [10, 0, 16, 7], "texture": "#1"},
+				"west": {"uv": [10, 0, 16, 7], "texture": "#1"},
+				"up": {"uv": [10, 7, 16, 13], "texture": "#1"},
+				"down": {"uv": [10, 7, 16, 13], "texture": "#1"}
+			}
+		},
+		{
+			"from": [6, 2, 4],
+			"to": [10, 8, 8],
+			"shade": false,
+			"faces": {
+				"north": {"uv": [0, 9, 6, 16], "texture": "#1"},
+				"east": {"uv": [0, 9, 6, 16], "texture": "#1"},
+				"south": {"uv": [0, 9, 4, 16], "texture": "#1"},
+				"west": {"uv": [0, 9, 6, 16], "texture": "#1"},
+				"up": {"uv": [0, 9, 6, 15], "texture": "#1"},
+				"down": {"uv": [0, 9, 6, 15], "texture": "#1"}
+			}
+		},
+		{
+			"from": [6, 8, 1],
+			"to": [10, 10, 8],
+			"faces": {
+				"north": {"uv": [0, 0, 4, 2], "texture": "#1"},
+				"east": {"uv": [0, 0, 7, 2], "texture": "#1"},
+				"south": {"uv": [0, 0, 4, 2], "texture": "#1"},
+				"west": {"uv": [0, 0, 7, 2], "texture": "#1"},
+				"up": {"uv": [0, 0, 7, 4], "texture": "#1"},
+				"down": {"uv": [0, 0, 7, 4], "texture": "#1"}
+			}
+		},
+		{
+			"from": [4, 6, 0],
+			"to": [12, 12, 1],
+			"faces": {
+				"north": {"uv": [0, 0, 8, 4], "texture": "#1"},
+				"east": {"uv": [0, 0, 1, 8], "texture": "#1"},
+				"south": {"uv": [0, 0, 8, 4], "texture": "#1"},
+				"west": {"uv": [0, 0, 1, 8], "texture": "#1"},
+				"up": {"uv": [0, 0, 8, 1], "texture": "#1"},
+				"down": {"uv": [0, 0, 8, 1], "texture": "#1"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "industrial_wall_light",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": [0, 1, 2, 3]
+		}
+	]
+}

@@ -84,6 +84,8 @@ public class FactoryMadeBlockTagsProvider extends BlockTagsProvider {
 				
 				.add(ModBlocks.FLUORESCENT_LIGHT_PANEL.get())
 				.add(ModBlocks.FLUORESCENT_LIGHT_PANEL_SLAB.get())
+
+				.add(ModBlocks.INDUSTRIAL_WALL_LIGHT.get())
 				;
 		
 		tag(BlockTags.MINEABLE_WITH_AXE)

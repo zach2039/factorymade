@@ -69,6 +69,8 @@ public class FactoryMadeBlockLootTables extends BlockLoot {
 		
 		dropSelf(ModBlocks.FLUORESCENT_LIGHT_PANEL.get());
 		dropSelf(ModBlocks.FLUORESCENT_LIGHT_PANEL_SLAB.get());
+
+		dropSelf(ModBlocks.INDUSTRIAL_WALL_LIGHT.get());
 	}
 
 	@Override

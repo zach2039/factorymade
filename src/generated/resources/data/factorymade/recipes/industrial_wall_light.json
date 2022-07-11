@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "f": {
+      "item": "factorymade:fluorescent_light_panel"
+    },
+    "i": {
+      "item": "minecraft:iron_nugget"
+    }
+  },
+  "pattern": [
+    "iii",
+    "ifi",
+    "iii"
+  ],
+  "result": {
+    "count": 2,
+    "item": "factorymade:industrial_wall_light"
+  }
+}
