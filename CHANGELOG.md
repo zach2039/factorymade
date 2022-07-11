@@ -1,3 +1,7 @@
+### v1.19-1.0.3-4
+
+ - Add Industrial Wall Light 
+
 ### v1.19-1.0.2-3
 
  - Fix JEI category using Stonecutter as icon 

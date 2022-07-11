@@ -46,7 +46,15 @@ public class ModBlocks {
 	public static final RegistryObject<Block> RUSTED_IRON_NON_SLIP_WALKWAY = registerBlock("rusted_iron_non_slip_walkway", () -> ModBlockInstances.RUSTED_IRON_NON_SLIP_WALKWAY);
 	public static final RegistryObject<StairBlock> RUSTED_IRON_NON_SLIP_WALKWAY_STAIRS = registerBlock("rusted_iron_non_slip_walkway_stairs", () -> ModBlockInstances.RUSTED_IRON_NON_SLIP_WALKWAY_STAIRS);
 	public static final RegistryObject<SlabBlock> RUSTED_IRON_NON_SLIP_WALKWAY_SLAB = registerBlock("rusted_iron_non_slip_walkway_slab", () -> ModBlockInstances.RUSTED_IRON_NON_SLIP_WALKWAY_SLAB);
-	
+
+	public static final RegistryObject<Block> IRON_PLATE = registerBlock("iron_plate", () -> ModBlockInstances.IRON_PLATE);
+	public static final RegistryObject<StairBlock> IRON_PLATE_STAIRS = registerBlock("iron_plate_stairs", () -> ModBlockInstances.IRON_PLATE_STAIRS);
+	public static final RegistryObject<SlabBlock> IRON_PLATE_SLAB = registerBlock("iron_plate_slab", () -> ModBlockInstances.IRON_PLATE_SLAB);
+
+	public static final RegistryObject<Block> RUSTED_IRON_PLATE = registerBlock("rusted_iron_plate", () -> ModBlockInstances.RUSTED_IRON_PLATE);
+	public static final RegistryObject<StairBlock> RUSTED_IRON_PLATE_STAIRS = registerBlock("rusted_iron_plate_stairs", () -> ModBlockInstances.RUSTED_IRON_PLATE_STAIRS);
+	public static final RegistryObject<SlabBlock> RUSTED_IRON_PLATE_SLAB = registerBlock("rusted_iron_plate_slab", () -> ModBlockInstances.RUSTED_IRON_PLATE_SLAB);
+
 	public static final RegistryObject<RotatedPillarBlock> IRON_TRUSS = registerBlock("iron_truss", () -> ModBlockInstances.IRON_TRUSS);
 	public static final RegistryObject<RotatedPillarBlock> RUSTED_IRON_TRUSS = registerBlock("rusted_iron_truss", () -> ModBlockInstances.RUSTED_IRON_TRUSS);
 	
@@ -148,7 +156,6 @@ public class ModBlocks {
 	 *
 	 * @param name         The registry name of the block
 	 * @param blockFactory The factory used to create the block
-	 * @param itemFactory  The factory used to create the block item
 	 * @param <BLOCK>      The block type
 	 * @return A RegistryObject reference to the block
 	 */
@@ -159,7 +166,7 @@ public class ModBlocks {
 	}
 
 	/**
-	 * Gets an {@link Item.Properties} instance with the {@link CreativeModeTab} set to {@link TestMod3#CREATIVE_MODE_TAB}.
+	 * Gets an {@link Item.Properties} instance with the {@link CreativeModeTab} set to {@link FactoryMade#CREATIVE_MODE_TAB}.
 	 *
 	 * @return The item properties
 	 */
@@ -195,7 +202,16 @@ public class ModBlocks {
 		public static final Block RUSTED_IRON_NON_SLIP_WALKWAY = new Block(LIGHT_IRON_PROPS);
 		public static final StairBlock RUSTED_IRON_NON_SLIP_WALKWAY_STAIRS = new StairBlock(() -> {return RUSTED_IRON_NON_SLIP_WALKWAY.defaultBlockState();}, BlockBehaviour.Properties.copy(IRON_NON_SLIP_WALKWAY));
 		public static final SlabBlock RUSTED_IRON_NON_SLIP_WALKWAY_SLAB = new SlabBlock(BlockBehaviour.Properties.copy(RUSTED_IRON_NON_SLIP_WALKWAY));
-		
+
+		public static final Block IRON_PLATE = new Block(LIGHT_IRON_PROPS);
+		public static final StairBlock IRON_PLATE_STAIRS = new StairBlock(() -> {return IRON_PLATE.defaultBlockState();}, BlockBehaviour.Properties.copy(IRON_PLATE));
+		public static final SlabBlock IRON_PLATE_SLAB = new SlabBlock(BlockBehaviour.Properties.copy(IRON_PLATE));
+
+		public static final Block RUSTED_IRON_PLATE = new Block(LIGHT_IRON_PROPS);
+		public static final StairBlock RUSTED_IRON_PLATE_STAIRS = new StairBlock(() -> {return RUSTED_IRON_PLATE.defaultBlockState();}, BlockBehaviour.Properties.copy(RUSTED_IRON_PLATE));
+		public static final SlabBlock RUSTED_IRON_PLATE_SLAB = new SlabBlock(BlockBehaviour.Properties.copy(RUSTED_IRON_PLATE));
+
+
 		public static final RotatedPillarBlock IRON_TRUSS = new RotatedPillarBlock(LIGHT_IRON_PROPS);
 		public static final RotatedPillarBlock RUSTED_IRON_TRUSS = new RotatedPillarBlock(LIGHT_IRON_PROPS);
 		

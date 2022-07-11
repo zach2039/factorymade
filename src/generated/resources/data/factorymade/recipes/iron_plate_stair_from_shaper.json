@@ -1,0 +1,8 @@
+{
+  "type": "factorymade:industrial_shaper",
+  "count": 1,
+  "ingredient": {
+    "item": "factorymade:iron_plate"
+  },
+  "result": "factorymade:iron_plate_stairs"
+}

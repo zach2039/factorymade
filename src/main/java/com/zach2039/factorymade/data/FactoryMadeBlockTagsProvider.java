@@ -37,7 +37,15 @@ public class FactoryMadeBlockTagsProvider extends BlockTagsProvider {
 				.add(ModBlocks.RUSTED_IRON_NON_SLIP_WALKWAY.get())
 				.add(ModBlocks.RUSTED_IRON_NON_SLIP_WALKWAY_STAIRS.get())
 				.add(ModBlocks.RUSTED_IRON_NON_SLIP_WALKWAY_SLAB.get())
-				
+
+				.add(ModBlocks.IRON_PLATE.get())
+				.add(ModBlocks.IRON_PLATE_STAIRS.get())
+				.add(ModBlocks.IRON_PLATE_SLAB.get())
+
+				.add(ModBlocks.RUSTED_IRON_PLATE.get())
+				.add(ModBlocks.RUSTED_IRON_PLATE_STAIRS.get())
+				.add(ModBlocks.RUSTED_IRON_PLATE_SLAB.get())
+
 				.add(ModBlocks.IRON_TRUSS.get())
 				
 				.add(ModBlocks.RUSTED_IRON_TRUSS.get())

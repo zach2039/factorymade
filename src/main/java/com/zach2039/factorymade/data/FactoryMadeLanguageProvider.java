@@ -72,7 +72,15 @@ public class FactoryMadeLanguageProvider extends LanguageProvider {
 		addBlock(ModBlocks.RUSTED_IRON_NON_SLIP_WALKWAY, "Rusted Iron Non-Slip Walkway");
 		addBlock(ModBlocks.RUSTED_IRON_NON_SLIP_WALKWAY_STAIRS, "Rusted Iron Non-Slip Walkway Stairs");
 		addBlock(ModBlocks.RUSTED_IRON_NON_SLIP_WALKWAY_SLAB, "Rusted Iron Non-Slip Walkway Slab");
-		
+
+		addBlock(ModBlocks.IRON_PLATE, "Iron Plate");
+		addBlock(ModBlocks.IRON_PLATE_STAIRS, "Iron Plate Stairs");
+		addBlock(ModBlocks.IRON_PLATE_SLAB, "Iron Plate Slab");
+
+		addBlock(ModBlocks.RUSTED_IRON_PLATE, "Rusted Iron Plate");
+		addBlock(ModBlocks.RUSTED_IRON_PLATE_STAIRS, "Rusted Iron Plate Stairs");
+		addBlock(ModBlocks.RUSTED_IRON_PLATE_SLAB, "Rusted Iron Plate Slab");
+
 		addBlock(ModBlocks.IRON_TRUSS, "Iron Truss");
 		addBlock(ModBlocks.RUSTED_IRON_TRUSS, "Rusted Iron Truss");
 		

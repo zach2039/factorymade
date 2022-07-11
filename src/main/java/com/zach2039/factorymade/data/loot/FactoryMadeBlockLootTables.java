@@ -22,7 +22,15 @@ public class FactoryMadeBlockLootTables extends BlockLoot {
 		dropSelf(ModBlocks.RUSTED_IRON_NON_SLIP_WALKWAY.get());
 		dropSelf(ModBlocks.RUSTED_IRON_NON_SLIP_WALKWAY_STAIRS.get());
 		dropSelf(ModBlocks.RUSTED_IRON_NON_SLIP_WALKWAY_SLAB.get());
-		
+
+		dropSelf(ModBlocks.IRON_PLATE.get());
+		dropSelf(ModBlocks.IRON_PLATE_STAIRS.get());
+		dropSelf(ModBlocks.IRON_PLATE_SLAB.get());
+
+		dropSelf(ModBlocks.RUSTED_IRON_PLATE.get());
+		dropSelf(ModBlocks.RUSTED_IRON_PLATE_STAIRS.get());
+		dropSelf(ModBlocks.RUSTED_IRON_PLATE_SLAB.get());
+
 		dropSelf(ModBlocks.IRON_TRUSS.get());
 		
 		dropSelf(ModBlocks.RUSTED_IRON_TRUSS.get());

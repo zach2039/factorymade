@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "B": {
+      "item": "factorymade:iron_plate"
+    }
+  },
+  "pattern": [
+    "BBB"
+  ],
+  "result": {
+    "count": 3,
+    "item": "factorymade:iron_plate_slab"
+  }
+}

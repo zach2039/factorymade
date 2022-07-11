@@ -61,7 +61,27 @@ public class FactoryMadeRecipeProvider extends RecipeProvider {
 					ModBlocks.RUSTED_IRON_NON_SLIP_WALKWAY_SLAB.get()
 					);
 		}
-		
+
+		// Iron Plate
+		{
+			addBlockStairSlab(recipeConsumer,
+					Blocks.IRON_BLOCK,
+					ModBlocks.IRON_PLATE.get(), 16,
+					ModBlocks.IRON_PLATE_STAIRS.get(),
+					ModBlocks.IRON_PLATE_SLAB.get()
+			);
+		}
+
+		// Rusted Iron Plate
+		{
+			addBlockStairSlab(recipeConsumer,
+					Blocks.IRON_BLOCK,
+					ModBlocks.RUSTED_IRON_PLATE.get(), 16,
+					ModBlocks.RUSTED_IRON_PLATE_STAIRS.get(),
+					ModBlocks.RUSTED_IRON_PLATE_SLAB.get()
+			);
+		}
+
 		// Iron Truss
 		{
 			IndustrialShaperRecipeBuilder.industrialshaper(Ingredient.of(Blocks.IRON_BLOCK), ModBlocks.IRON_TRUSS.get(), 16)

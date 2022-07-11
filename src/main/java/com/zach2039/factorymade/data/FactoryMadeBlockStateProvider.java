@@ -153,7 +153,39 @@ public class FactoryMadeBlockStateProvider extends BlockStateProvider {
 			slabBlock(slab, modLoc("block/rusted_iron_non_slip_walkway"), modLoc("block/rusted_iron_non_slip_walkway"));
 			simpleBlockItem(slab);
 		}
-		
+
+		// Iron Plate
+		{
+			Block block = ModBlocks.IRON_PLATE.get();
+			StairBlock stair = ModBlocks.IRON_PLATE_STAIRS.get();
+			SlabBlock slab = ModBlocks.IRON_PLATE_SLAB.get();
+
+			simpleBlock(block);
+			simpleBlockItem(block);
+
+			stairsBlock(stair, modLoc("block/iron_plate"));
+			simpleBlockItem(stair);
+
+			slabBlock(slab, modLoc("block/iron_plate"), modLoc("block/iron_plate"));
+			simpleBlockItem(slab);
+		}
+
+		// Rusted Iron Plate
+		{
+			Block block = ModBlocks.RUSTED_IRON_PLATE.get();
+			StairBlock stair = ModBlocks.RUSTED_IRON_PLATE_STAIRS.get();
+			SlabBlock slab = ModBlocks.RUSTED_IRON_PLATE_SLAB.get();
+
+			simpleBlock(block);
+			simpleBlockItem(block);
+
+			stairsBlock(stair, modLoc("block/rusted_iron_plate"));
+			simpleBlockItem(stair);
+
+			slabBlock(slab, modLoc("block/rusted_iron_plate"), modLoc("block/rusted_iron_plate"));
+			simpleBlockItem(slab);
+		}
+
 		// Iron Truss
 		{
 			RotatedPillarBlock block = ModBlocks.IRON_TRUSS.get();
@@ -268,6 +300,8 @@ public class FactoryMadeBlockStateProvider extends BlockStateProvider {
 			slabBlock(slab, modLoc("block/fluorescent_light_panel"), modLoc("block/fluorescent_light_panel"));
 			simpleBlockItem(slab);
 		}
+
+		// Industrial Wall Light models are manual
 	}
 
 	private void blockstateError(final Block block, final String fmt, final Object... args) {
