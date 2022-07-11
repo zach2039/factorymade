@@ -19,7 +19,7 @@ public class BlockRenderLayers
 	@SubscribeEvent
 	public static void clientSetup(FMLClientSetupEvent ev)
 	{
-		setRenderLayer(ModBlocks.INDUSTRIAL_WALL_LIGHT, RenderType.translucent());
+		setRenderLayer(ModBlocks.INDUSTRIAL_WALL_LIGHT, RenderType.translucent(), RenderType.cutout());
 	}
 
 	private static void setRenderLayer(Supplier<? extends Block> supplier, RenderType type)
@@ -31,7 +31,7 @@ public class BlockRenderLayers
 	{
 		ItemBlockRenderTypes.setRenderLayer(supplier.get(), t -> {
 			for(RenderType allowed : types)
-				if(t==allowed)
+				if(t == allowed)
 					return true;
 			return false;
 		});

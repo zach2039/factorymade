@@ -261,7 +261,7 @@ public class FactoryMadeBlockStateProvider extends BlockStateProvider {
 		{
 			Block block = ModBlocks.FLUORESCENT_LIGHT_PANEL.get();
 			SlabBlock slab = ModBlocks.FLUORESCENT_LIGHT_PANEL_SLAB.get();
-			
+
 			simpleBlock(block);
 			simpleBlockItem(block);
 			

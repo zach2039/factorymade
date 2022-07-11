@@ -1,8 +1,10 @@
 {
 	"credit": "Made with Blockbench",
 	"parent": "block/block",
+	"ambientocclusion": false,
 	"textures": {
-		"1": "factorymade:block/industrial_wall_light"
+		"1": "factorymade:block/industrial_wall_light",
+		"particle": "factorymade:block/industrial_wall_light"
 	},
 	"elements": [
 		{
