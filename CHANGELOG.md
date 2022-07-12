@@ -1,3 +1,7 @@
+### v1.19-1.0.4-5
+
+ - Fix slab recipe to return 6 instead of 3 
+
 ### v1.19-1.0.3-4
 
  - Add Industrial Wall Light

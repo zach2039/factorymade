@@ -198,7 +198,7 @@ public class FactoryMadeRecipeProvider extends RecipeProvider {
 	}
 
 	private void addSlabRecipes(final Consumer<FinishedRecipe> recipeConsumer, Block inputBlock, SlabBlock outputSlab) {
-		ShapedRecipeBuilder.shaped(outputSlab, 3)
+		ShapedRecipeBuilder.shaped(outputSlab, 6)
 						.pattern("BBB")
 						.define('B', Ingredient.of(inputBlock))
 						.unlockedBy("has_block", has(inputBlock))
