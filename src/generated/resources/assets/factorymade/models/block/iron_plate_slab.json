@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "factorymade:block/iron_plate",
-    "side": "factorymade:block/iron_plate",
-    "top": "factorymade:block/iron_plate"
-  }
-}

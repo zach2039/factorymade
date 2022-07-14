@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "factorymade:block/clean_iron_non_slip_walkway"
+  }
+}

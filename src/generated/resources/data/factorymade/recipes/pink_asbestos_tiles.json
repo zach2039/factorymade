@@ -1,0 +1,8 @@
+{
+  "type": "factorymade:industrial_shaper",
+  "count": 4,
+  "ingredient": {
+    "item": "minecraft:pink_concrete"
+  },
+  "result": "factorymade:pink_asbestos_tiles"
+}

@@ -265,7 +265,7 @@ public class BlockVariantGroup<VARIANT extends Enum<VARIANT> & StringRepresentab
 		 * Sets the factory function used to create the properties for each block item.
 		 * <p>
 		 * If no item properties factory is specified, a factory producing item properties with the {@link CreativeModeTab}
-		 * set to {@link TestMod3#CREATIVE_MODE_TAB} is used.
+		 * set to {@link FactoryMade#CREATIVE_MODE_TAB} is used.
 		 *
 		 * @param itemPropertiesFactory The item properties factory function
 		 * @return This builder

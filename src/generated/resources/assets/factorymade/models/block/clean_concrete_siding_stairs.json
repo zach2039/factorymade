@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "factorymade:block/clean_concrete_siding",
+    "side": "factorymade:block/clean_concrete_siding",
+    "top": "factorymade:block/clean_concrete_siding"
+  }
+}

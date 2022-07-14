@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "factorymade:block/clean_iron_grating_slab"
+    },
+    "type=double": {
+      "model": "factorymade:block/clean_iron_grating"
+    },
+    "type=top": {
+      "model": "factorymade:block/clean_iron_grating_slab_top"
+    }
+  }
+}

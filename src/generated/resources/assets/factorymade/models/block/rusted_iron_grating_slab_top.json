@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "factorymade:block/rusted_iron_grating",
+    "side": "factorymade:block/rusted_iron_grating",
+    "top": "factorymade:block/rusted_iron_grating"
+  }
+}

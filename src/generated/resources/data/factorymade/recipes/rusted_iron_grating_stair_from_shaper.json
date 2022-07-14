@@ -1,0 +1,8 @@
+{
+  "type": "factorymade:industrial_shaper",
+  "count": 1,
+  "ingredient": {
+    "item": "factorymade:rusted_iron_grating"
+  },
+  "result": "factorymade:rusted_iron_grating_stairs"
+}

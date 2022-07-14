@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "factorymade:block/computer/computer_casing",
+    "east": "factorymade:block/computer/computer_casing",
+    "north": "factorymade:block/computer/computer_interface",
+    "particle": "factorymade:block/computer/computer_casing",
+    "south": "factorymade:block/computer/computer_casing",
+    "up": "factorymade:block/computer/computer_casing",
+    "west": "factorymade:block/computer/computer_casing"
+  }
+}

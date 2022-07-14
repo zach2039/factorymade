@@ -1,6 +1,7 @@
 package com.zach2039.factorymade.data;
 
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 import java.util.function.Supplier;
 
@@ -8,8 +9,13 @@ import com.zach2039.factorymade.FactoryMade;
 import com.zach2039.factorymade.fluid.group.FluidGroup;
 import com.zach2039.factorymade.init.ModBlocks;
 import com.zach2039.factorymade.text.FactoryMadeLang;
+import com.zach2039.factorymade.util.ModStringUtil;
+import com.zach2039.factorymade.world.level.block.variant.ComputerBlockVariant;
+import com.zach2039.factorymade.world.level.block.variant.IBlockVariant;
 import com.zach2039.factorymade.world.level.block.IndustrialShaperBlock;
 
+import com.zach2039.factorymade.world.level.block.variant.SimpleConcreteBlockVariant;
+import com.zach2039.factorymade.world.level.block.variant.SimpleMetalBlockVariant;
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.util.StringRepresentable;
@@ -64,25 +70,69 @@ public class FactoryMadeLanguageProvider extends LanguageProvider {
 
 	private void addBlocks() {
 		addBlock(ModBlocks.INDUSTRIAL_SHAPER, "Industrial Shaper");
-		
-		addBlock(ModBlocks.IRON_NON_SLIP_WALKWAY, "Iron Non-Slip Walkway");
-		addBlock(ModBlocks.IRON_NON_SLIP_WALKWAY_STAIRS, "Iron Non-Slip Walkway Stairs");
-		addBlock(ModBlocks.IRON_NON_SLIP_WALKWAY_SLAB, "Iron Non-Slip Walkway Slab");
-		
-		addBlock(ModBlocks.RUSTED_IRON_NON_SLIP_WALKWAY, "Rusted Iron Non-Slip Walkway");
-		addBlock(ModBlocks.RUSTED_IRON_NON_SLIP_WALKWAY_STAIRS, "Rusted Iron Non-Slip Walkway Stairs");
-		addBlock(ModBlocks.RUSTED_IRON_NON_SLIP_WALKWAY_SLAB, "Rusted Iron Non-Slip Walkway Slab");
 
-		addBlock(ModBlocks.IRON_PLATE, "Iron Plate");
-		addBlock(ModBlocks.IRON_PLATE_STAIRS, "Iron Plate Stairs");
-		addBlock(ModBlocks.IRON_PLATE_SLAB, "Iron Plate Slab");
+		// Iron Non-Slip Walkway
+		ModBlocks.IRON_NON_SLIP_WALKWAY_BLOCKS.getBlocks().forEach(block -> {
+			String variantName = block.get().getType().getSerializedName();
+			String prefix = (!variantName.equals("clean")) ? ModStringUtil.capitalize(variantName + " ") : "";
+			addBlock(block, prefix + "Iron Non-Slip Walkway");
+		});
+		ModBlocks.IRON_NON_SLIP_WALKWAY_STAIRS.getBlocks().forEach(block -> {
+			String variantName = block.get().getType().getSerializedName();
+			String prefix = (!variantName.equals("clean")) ? ModStringUtil.capitalize(variantName + " ") : "";
+			addBlock(block, prefix + "Iron Non-Slip Walkway Stairs");
+		});
+		ModBlocks.IRON_NON_SLIP_WALKWAY_SLABS.getBlocks().forEach(block -> {
+			String variantName = block.get().getType().getSerializedName();
+			String prefix = (!variantName.equals("clean")) ? ModStringUtil.capitalize(variantName + " ") : "";
+			addBlock(block, prefix + "Iron Non-Slip Walkway Slab");
+		});
 
-		addBlock(ModBlocks.RUSTED_IRON_PLATE, "Rusted Iron Plate");
-		addBlock(ModBlocks.RUSTED_IRON_PLATE_STAIRS, "Rusted Iron Plate Stairs");
-		addBlock(ModBlocks.RUSTED_IRON_PLATE_SLAB, "Rusted Iron Plate Slab");
+		// Iron Plate
+		ModBlocks.IRON_PLATE_BLOCKS.getBlocks().forEach(block -> {
+			String variantName = block.get().getType().getSerializedName();
+			String prefix = (!variantName.equals("clean")) ? ModStringUtil.capitalize(variantName + " ") : "";
+			addBlock(block, prefix + "Iron Plate");
+		});
+		ModBlocks.IRON_PLATE_STAIRS.getBlocks().forEach(block -> {
+			String variantName = block.get().getType().getSerializedName();
+			String prefix = (!variantName.equals("clean")) ? ModStringUtil.capitalize(variantName + " ") : "";
+			addBlock(block, prefix + "Iron Plate Stairs");
+		});
+		ModBlocks.IRON_PLATE_SLABS.getBlocks().forEach(block -> {
+			String variantName = block.get().getType().getSerializedName();
+			String prefix = (!variantName.equals("clean")) ? ModStringUtil.capitalize(variantName + " ") : "";
+			addBlock(block, prefix + "Iron Plate Slab");
+		});
 
-		addBlock(ModBlocks.IRON_TRUSS, "Iron Truss");
-		addBlock(ModBlocks.RUSTED_IRON_TRUSS, "Rusted Iron Truss");
+		// Iron Grating
+		ModBlocks.IRON_GRATING_BLOCKS.getBlocks().forEach(block -> {
+			String variantName = block.get().getType().getSerializedName();
+			String prefix = (!variantName.equals("clean")) ? ModStringUtil.capitalize(variantName + " ") : "";
+			addBlock(block, prefix + "Iron Grating");
+		});
+		ModBlocks.IRON_GRATING_STAIRS.getBlocks().forEach(block -> {
+			String variantName = block.get().getType().getSerializedName();
+			String prefix = (!variantName.equals("clean")) ? ModStringUtil.capitalize(variantName + " ") : "";
+			addBlock(block, prefix + "Iron Grating Stairs");
+		});
+		ModBlocks.IRON_GRATING_SLABS.getBlocks().forEach(block -> {
+			String variantName = block.get().getType().getSerializedName();
+			String prefix = (!variantName.equals("clean")) ? ModStringUtil.capitalize(variantName + " ") : "";
+			addBlock(block, prefix + "Iron Grating Slab");
+		});
+		ModBlocks.IRON_GRATING_PANES.getBlocks().forEach(block -> {
+			String variantName = block.get().getType().getSerializedName();
+			String prefix = (!variantName.equals("clean")) ? ModStringUtil.capitalize(variantName + " ") : "";
+			addBlock(block, prefix + "Iron Grating Pane");
+		});
+
+		// Iron Truss
+		ModBlocks.IRON_TRUSS_BLOCKS.getBlocks().forEach(block -> {
+			String variantName = block.get().getType().getSerializedName();
+			String prefix = (!variantName.equals("clean")) ? ModStringUtil.capitalize(variantName + " ") : "";
+			addBlock(block, prefix + "Iron Truss");
+		});
 		
 		addBlock(ModBlocks.WHITE_CINDER_BLOCK_BRICKS, "White Cinder Block Bricks");
 		addBlock(ModBlocks.WHITE_CINDER_BLOCK_BRICKS_STAIRS, "White Cinder Block Bricks Stairs");
@@ -107,23 +157,47 @@ public class FactoryMadeLanguageProvider extends LanguageProvider {
 		addBlock(ModBlocks.BROWN_CINDER_BLOCK_BRICKS, "Brown Cinder Block Bricks");
 		addBlock(ModBlocks.BROWN_CINDER_BLOCK_BRICKS_STAIRS, "Brown Cinder Block Bricks Stairs");
 		addBlock(ModBlocks.BROWN_CINDER_BLOCK_BRICKS_SLAB, "Brown Cinder Block Bricks Slab");
-		
-		addBlock(ModBlocks.CONCRETE_SIDING, "Concrete Siding");
-		addBlock(ModBlocks.CONCRETE_SIDING_STAIRS, "Concrete Siding Stairs");
-		addBlock(ModBlocks.CONCRETE_SIDING_SLAB, "Concrete Siding Slab");
-		
-		addBlock(ModBlocks.WEATHERED_CONCRETE_SIDING, "Weathered Concrete Siding");
-		addBlock(ModBlocks.WEATHERED_CONCRETE_SIDING_STAIRS, "Weathered Concrete Siding Stairs");
-		addBlock(ModBlocks.WEATHERED_CONCRETE_SIDING_SLAB, "Weathered Concrete Siding Slab");
-		
-		addBlock(ModBlocks.BLACK_ASBESTOS_TILES, "Black Asbestos Tiles");
-		addBlock(ModBlocks.BLACK_ASBESTOS_TILES_STAIRS, "Black Asbestos Tiles Stairs");
-		addBlock(ModBlocks.BLACK_ASBESTOS_TILES_SLAB, "Black Asbestos Tiles Slab");
-		
-		addBlock(ModBlocks.WHITE_ASBESTOS_TILES, "White Asbestos Tiles");
-		addBlock(ModBlocks.WHITE_ASBESTOS_TILES_STAIRS, "White Asbestos Tiles Stairs");
-		addBlock(ModBlocks.WHITE_ASBESTOS_TILES_SLAB, "White Asbestos Tiles Slab");
-		
+
+		// Concrete Siding
+		ModBlocks.CONCRETE_SIDING_BLOCKS.getBlocks().forEach(block -> {
+			String variantName = block.get().getType().getSerializedName();
+			String prefix = (!variantName.equals("clean")) ? ModStringUtil.capitalize(variantName + " ") : "";
+			addBlock(block, prefix + "Concrete Siding");
+		});
+		ModBlocks.CONCRETE_SIDING_STAIRS.getBlocks().forEach(block -> {
+			String variantName = block.get().getType().getSerializedName();
+			String prefix = (!variantName.equals("clean")) ? ModStringUtil.capitalize(variantName + " ") : "";
+			addBlock(block, prefix + "Concrete Siding Stairs");
+		});
+		ModBlocks.CONCRETE_SIDING_SLABS.getBlocks().forEach(block -> {
+			String variantName = block.get().getType().getSerializedName();
+			String prefix = (!variantName.equals("clean")) ? ModStringUtil.capitalize(variantName + " ") : "";
+			addBlock(block, prefix + "Concrete Siding Slab");
+		});
+
+		// Asbestos Tiles
+		ModBlocks.ASBESTOS_TILES_BLOCKS.getBlocks().forEach(blockReg -> {
+			String colorName = ModStringUtil.getColorName((DyeColor) blockReg.get().getType());
+			String prefix = colorName + " ";
+			addBlock(blockReg, prefix + "Asbestos Tiles");
+		});
+		ModBlocks.ASBESTOS_TILES_STAIRS.getBlocks().forEach(blockReg -> {
+			String colorName = ModStringUtil.getColorName((DyeColor) blockReg.get().getType());
+			String prefix = colorName + " ";
+			addBlock(blockReg, prefix + "Asbestos Tiles Stairs");
+		});
+		ModBlocks.ASBESTOS_TILES_SLABS.getBlocks().forEach(blockReg -> {
+			String colorName = ModStringUtil.getColorName((DyeColor) blockReg.get().getType());
+			String prefix = colorName + " ";
+			addBlock(blockReg, prefix + "Asbestos Tiles Slab");
+		});
+
+		// Computer
+		ModBlocks.COMPUTER_BLOCKS.getBlocks().forEach(blockReg -> {
+			String suffix = " " + ((ComputerBlockVariant) blockReg.get().getType()).getDisplayName();
+			addBlock(blockReg, "Computer" + suffix);
+		});
+
 		addBlock(ModBlocks.FLUORESCENT_LIGHT_PANEL, "Fluorescent Light Panel");
 		addBlock(ModBlocks.FLUORESCENT_LIGHT_PANEL_SLAB, "Fluorescent Light Panel Slab");
 

@@ -5,8 +5,10 @@ import java.util.function.Supplier;
 import com.google.common.base.Preconditions;
 import com.zach2039.factorymade.FactoryMade;
 import com.zach2039.factorymade.fluid.group.FluidGroup;
+import com.zach2039.factorymade.init.ModBlocks;
 import com.zach2039.factorymade.util.ModRegistryUtil;
 
+import com.zach2039.factorymade.world.level.block.variant.SimpleMetalBlockVariant;
 import net.minecraft.client.renderer.block.model.ItemTransforms.TransformType;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
@@ -14,9 +16,7 @@ import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.Fluids;
-import net.minecraftforge.client.model.generators.ItemModelBuilder;
-import net.minecraftforge.client.model.generators.ItemModelProvider;
-import net.minecraftforge.client.model.generators.ModelFile;
+import net.minecraftforge.client.model.generators.*;
 import net.minecraftforge.client.model.generators.loaders.DynamicBucketModelBuilder;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.common.util.Lazy;
@@ -62,37 +62,6 @@ public class FactoryMadeItemModelProvider extends ItemModelProvider {
 
 					.end()
 	);
-
-	private final Supplier<ModelFile> simpleFirearmModel = Lazy.of(() ->
-			withGeneratedParent("simple_model")
-					.transforms()
-
-					.transform(TransformType.THIRD_PERSON_RIGHT_HAND)
-					.rotation(-80, 260, -40)
-					.translation(-1, 1, 0f)
-					.scale(0.9f, 0.9f, 0.9f)
-					.end()
-
-					.transform(TransformType.THIRD_PERSON_LEFT_HAND)
-					.rotation(-80, -280, 40)
-					.translation(-1, 1, 0f)
-					.scale(0.9f, 0.9f, 0.9f)
-					.end()
-
-					.transform(TransformType.FIRST_PERSON_RIGHT_HAND)
-					.rotation(0, -90, 25)
-					.translation(1.13f, 3.2f, 1.13f)
-					.scale(0.68f, 0.68f, 0.68f)
-					.end()
-
-					.transform(TransformType.FIRST_PERSON_LEFT_HAND)
-					.rotation(0, 90, -25)
-					.translation(1.13f, 3.2f, 1.13f)
-					.scale(0.68f, 0.68f, 0.68f)
-					.end()
-
-					.end()
-	);
 	
 	public FactoryMadeItemModelProvider(final DataGenerator generator, final ExistingFileHelper existingFileHelper) {
 		super(generator, FactoryMade.MODID, existingFileHelper);
@@ -108,7 +77,19 @@ public class FactoryMadeItemModelProvider extends ItemModelProvider {
 	
 	@Override
 	protected void registerModels() {
-
+		// Iron Grating Panes
+		{
+			ModBlocks.IRON_GRATING_PANES
+					.getBlocks()
+					.forEach(block -> {
+						withGeneratedParent(
+								block.get().asItem(),
+								modLoc("block/" + ModRegistryUtil.getKey(
+										ModBlocks.IRON_GRATING_BLOCKS.getBlock((SimpleMetalBlockVariant) block.get().getType()).get()
+										).getPath())
+						);
+					});
+		}
 	}
 
 
@@ -159,20 +140,6 @@ public class FactoryMadeItemModelProvider extends ItemModelProvider {
 	private ItemModelBuilder withSimpleParent(final String name) {
 		return getBuilder(name)
 				.parent(simpleModel.get());
-	}
-
-	private ItemModelBuilder withSimpleFirearmParent(final String name) {
-		return getBuilder(name)
-				.parent(simpleFirearmModel.get());
-	}
-	
-	private ItemModelBuilder withSimpleFirearmParent(final Item item, final String texture) {
-		return withSimpleFirearmParent(name(item))
-				.texture(LAYER_0, texture);
-	}
-	
-	private ItemModelBuilder withSimpleFirearmParent(final Item item, final ResourceLocation texture) {
-		return withSimpleFirearmParent(item, texture.toString());
 	}
 
 	private void spawnEggItem(final Item item) {

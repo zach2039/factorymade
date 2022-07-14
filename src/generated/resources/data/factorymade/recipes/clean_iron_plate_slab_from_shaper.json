@@ -1,0 +1,8 @@
+{
+  "type": "factorymade:industrial_shaper",
+  "count": 2,
+  "ingredient": {
+    "item": "factorymade:clean_iron_plate"
+  },
+  "result": "factorymade:clean_iron_plate_slab"
+}

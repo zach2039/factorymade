@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "factorymade:block/rusted_iron_grating_slab"
+    },
+    "type=double": {
+      "model": "factorymade:block/rusted_iron_grating"
+    },
+    "type=top": {
+      "model": "factorymade:block/rusted_iron_grating_slab_top"
+    }
+  }
+}

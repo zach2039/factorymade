@@ -5,9 +5,13 @@ import javax.annotation.Nullable;
 import com.zach2039.factorymade.FactoryMade;
 import com.zach2039.factorymade.init.ModBlocks;
 
+import com.zach2039.factorymade.world.level.block.variant.IBlockVariant;
+import com.zach2039.factorymade.world.level.block.variant.SimpleMetalBlockVariant;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
+import net.minecraft.data.tags.TagsProvider;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
 /**
@@ -26,29 +30,78 @@ public class FactoryMadeBlockTagsProvider extends BlockTagsProvider {
 
 	@Override
 	protected void addTags() {
-		
-		tag(BlockTags.MINEABLE_WITH_PICKAXE)
+		TagsProvider.TagAppender<Block> pickaxeMinable = tag(BlockTags.MINEABLE_WITH_PICKAXE);
+
+		// Iron Plate
+		ModBlocks.IRON_PLATE_BLOCKS.getBlocks().forEach(block -> {
+			pickaxeMinable.add(block.get());
+		});
+		ModBlocks.IRON_PLATE_STAIRS.getBlocks().forEach(block -> {
+			pickaxeMinable.add(block.get());
+		});
+		ModBlocks.IRON_PLATE_SLABS.getBlocks().forEach(block -> {
+			pickaxeMinable.add(block.get());
+		});
+
+		// Iron Non-Slip Walkway
+		ModBlocks.IRON_NON_SLIP_WALKWAY_BLOCKS.getBlocks().forEach(block -> {
+			pickaxeMinable.add(block.get());
+		});
+		ModBlocks.IRON_NON_SLIP_WALKWAY_STAIRS.getBlocks().forEach(block -> {
+			pickaxeMinable.add(block.get());
+		});
+		ModBlocks.IRON_NON_SLIP_WALKWAY_SLABS.getBlocks().forEach(block -> {
+			pickaxeMinable.add(block.get());
+		});
+
+		// Iron Grating
+		ModBlocks.IRON_GRATING_BLOCKS.getBlocks().forEach(block -> {
+			pickaxeMinable.add(block.get());
+		});
+		ModBlocks.IRON_GRATING_STAIRS.getBlocks().forEach(block -> {
+			pickaxeMinable.add(block.get());
+		});
+		ModBlocks.IRON_GRATING_SLABS.getBlocks().forEach(block -> {
+			pickaxeMinable.add(block.get());
+		});
+		ModBlocks.IRON_GRATING_PANES.getBlocks().forEach(block -> {
+			pickaxeMinable.add(block.get());
+		});
+
+		// Iron Truss
+		ModBlocks.IRON_TRUSS_BLOCKS.getBlocks().forEach(block -> {
+			pickaxeMinable.add(block.get());
+		});
+
+		// Concrete Siding
+		ModBlocks.CONCRETE_SIDING_BLOCKS.getBlocks().forEach(block -> {
+			pickaxeMinable.add(block.get());
+		});
+		ModBlocks.CONCRETE_SIDING_STAIRS.getBlocks().forEach(block -> {
+			pickaxeMinable.add(block.get());
+		});
+		ModBlocks.CONCRETE_SIDING_SLABS.getBlocks().forEach(block -> {
+			pickaxeMinable.add(block.get());
+		});
+
+		// Asbestos Tiles
+		ModBlocks.ASBESTOS_TILES_BLOCKS.getBlocks().forEach(block -> {
+			pickaxeMinable.add(block.get());
+		});
+		ModBlocks.ASBESTOS_TILES_STAIRS.getBlocks().forEach(block -> {
+			pickaxeMinable.add(block.get());
+		});
+		ModBlocks.ASBESTOS_TILES_SLABS.getBlocks().forEach(block -> {
+			pickaxeMinable.add(block.get());
+		});
+
+		// Computer
+		ModBlocks.COMPUTER_BLOCKS.getBlocks().forEach(block -> {
+			pickaxeMinable.add(block.get());
+		});
+
+		pickaxeMinable
 				.add(ModBlocks.INDUSTRIAL_SHAPER.get())
-				
-				.add(ModBlocks.IRON_NON_SLIP_WALKWAY.get())
-				.add(ModBlocks.IRON_NON_SLIP_WALKWAY_STAIRS.get())
-				.add(ModBlocks.IRON_NON_SLIP_WALKWAY_SLAB.get())
-				
-				.add(ModBlocks.RUSTED_IRON_NON_SLIP_WALKWAY.get())
-				.add(ModBlocks.RUSTED_IRON_NON_SLIP_WALKWAY_STAIRS.get())
-				.add(ModBlocks.RUSTED_IRON_NON_SLIP_WALKWAY_SLAB.get())
-
-				.add(ModBlocks.IRON_PLATE.get())
-				.add(ModBlocks.IRON_PLATE_STAIRS.get())
-				.add(ModBlocks.IRON_PLATE_SLAB.get())
-
-				.add(ModBlocks.RUSTED_IRON_PLATE.get())
-				.add(ModBlocks.RUSTED_IRON_PLATE_STAIRS.get())
-				.add(ModBlocks.RUSTED_IRON_PLATE_SLAB.get())
-
-				.add(ModBlocks.IRON_TRUSS.get())
-				
-				.add(ModBlocks.RUSTED_IRON_TRUSS.get())
 				
 				.add(ModBlocks.WHITE_CINDER_BLOCK_BRICKS.get())
 				.add(ModBlocks.WHITE_CINDER_BLOCK_BRICKS_STAIRS.get())
@@ -73,22 +126,6 @@ public class FactoryMadeBlockTagsProvider extends BlockTagsProvider {
 				.add(ModBlocks.BROWN_CINDER_BLOCK_BRICKS.get())
 				.add(ModBlocks.BROWN_CINDER_BLOCK_BRICKS_STAIRS.get())
 				.add(ModBlocks.BROWN_CINDER_BLOCK_BRICKS_SLAB.get())
-				
-				.add(ModBlocks.CONCRETE_SIDING.get())
-				.add(ModBlocks.CONCRETE_SIDING_STAIRS.get())
-				.add(ModBlocks.CONCRETE_SIDING_SLAB.get())
-				
-				.add(ModBlocks.WEATHERED_CONCRETE_SIDING.get())
-				.add(ModBlocks.WEATHERED_CONCRETE_SIDING_STAIRS.get())
-				.add(ModBlocks.WEATHERED_CONCRETE_SIDING_SLAB.get())
-				
-				.add(ModBlocks.BLACK_ASBESTOS_TILES.get())
-				.add(ModBlocks.BLACK_ASBESTOS_TILES_STAIRS.get())
-				.add(ModBlocks.BLACK_ASBESTOS_TILES_SLAB.get())
-				
-				.add(ModBlocks.WHITE_ASBESTOS_TILES.get())
-				.add(ModBlocks.WHITE_ASBESTOS_TILES_STAIRS.get())
-				.add(ModBlocks.WHITE_ASBESTOS_TILES_SLAB.get())
 				
 				.add(ModBlocks.FLUORESCENT_LIGHT_PANEL.get())
 				.add(ModBlocks.FLUORESCENT_LIGHT_PANEL_SLAB.get())

@@ -19,7 +19,20 @@ public class BlockRenderLayers
 	@SubscribeEvent
 	public static void clientSetup(FMLClientSetupEvent ev)
 	{
-		setRenderLayer(ModBlocks.INDUSTRIAL_WALL_LIGHT, RenderType.translucent(), RenderType.cutout());
+		setRenderLayer(ModBlocks.INDUSTRIAL_WALL_LIGHT, RenderType.translucent(), RenderType.cutoutMipped());
+
+		ModBlocks.IRON_GRATING_BLOCKS.getBlocks().forEach(block ->
+			setRenderLayer(block, RenderType.translucent(), RenderType.cutoutMipped())
+		);
+		ModBlocks.IRON_GRATING_STAIRS.getBlocks().forEach(block ->
+			setRenderLayer(block, RenderType.translucent(), RenderType.cutoutMipped())
+		);
+		ModBlocks.IRON_GRATING_SLABS.getBlocks().forEach(block ->
+			setRenderLayer(block, RenderType.translucent(), RenderType.cutoutMipped())
+		);
+		ModBlocks.IRON_GRATING_PANES.getBlocks().forEach(block ->
+			setRenderLayer(block, RenderType.translucent(), RenderType.cutoutMipped())
+		);
 	}
 
 	private static void setRenderLayer(Supplier<? extends Block> supplier, RenderType type)

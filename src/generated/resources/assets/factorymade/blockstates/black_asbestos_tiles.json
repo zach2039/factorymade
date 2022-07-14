@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "factorymade:block/black_asbestos_tiles"
+      "model": "factorymade:block/asbestos_tiles/black_asbestos_tiles"
     }
   }
 }

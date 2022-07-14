@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_glass_pane_side",
+  "textures": {
+    "edge": "factorymade:block/clean_iron_grating",
+    "pane": "factorymade:block/clean_iron_grating"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "factorymade:block/light_gray_asbestos_tiles_slab"
+    },
+    "type=double": {
+      "model": "factorymade:block/asbestos_tiles/light_gray_asbestos_tiles"
+    },
+    "type=top": {
+      "model": "factorymade:block/light_gray_asbestos_tiles_slab_top"
+    }
+  }
+}

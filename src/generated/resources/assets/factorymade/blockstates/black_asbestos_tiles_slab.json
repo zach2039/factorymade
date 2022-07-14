@@ -4,7 +4,7 @@
       "model": "factorymade:block/black_asbestos_tiles_slab"
     },
     "type=double": {
-      "model": "factorymade:block/black_asbestos_tiles"
+      "model": "factorymade:block/asbestos_tiles/black_asbestos_tiles"
     },
     "type=top": {
       "model": "factorymade:block/black_asbestos_tiles_slab_top"

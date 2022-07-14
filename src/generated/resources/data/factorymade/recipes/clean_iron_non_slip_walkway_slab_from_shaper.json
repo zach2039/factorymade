@@ -1,0 +1,8 @@
+{
+  "type": "factorymade:industrial_shaper",
+  "count": 2,
+  "ingredient": {
+    "item": "factorymade:clean_iron_non_slip_walkway"
+  },
+  "result": "factorymade:clean_iron_non_slip_walkway_slab"
+}

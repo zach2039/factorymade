@@ -1,0 +1,8 @@
+{
+  "type": "factorymade:industrial_shaper",
+  "count": 2,
+  "ingredient": {
+    "item": "factorymade:clean_concrete_siding"
+  },
+  "result": "factorymade:clean_concrete_siding_slab"
+}

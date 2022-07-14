@@ -14,26 +14,47 @@ public class FactoryMadeBlockLootTables extends BlockLoot {
 	@Override
 	protected void addTables() {
 		dropSelf(ModBlocks.INDUSTRIAL_SHAPER.get());
-		
-		dropSelf(ModBlocks.IRON_NON_SLIP_WALKWAY.get());
-		dropSelf(ModBlocks.IRON_NON_SLIP_WALKWAY_STAIRS.get());
-		dropSelf(ModBlocks.IRON_NON_SLIP_WALKWAY_SLAB.get());
-		
-		dropSelf(ModBlocks.RUSTED_IRON_NON_SLIP_WALKWAY.get());
-		dropSelf(ModBlocks.RUSTED_IRON_NON_SLIP_WALKWAY_STAIRS.get());
-		dropSelf(ModBlocks.RUSTED_IRON_NON_SLIP_WALKWAY_SLAB.get());
 
-		dropSelf(ModBlocks.IRON_PLATE.get());
-		dropSelf(ModBlocks.IRON_PLATE_STAIRS.get());
-		dropSelf(ModBlocks.IRON_PLATE_SLAB.get());
+		// Iron Non-Slip Walkway
+		ModBlocks.IRON_NON_SLIP_WALKWAY_BLOCKS.getBlocks().forEach(block -> {
+			dropSelf(block.get());
+		});
+		ModBlocks.IRON_NON_SLIP_WALKWAY_STAIRS.getBlocks().forEach(block -> {
+			dropSelf(block.get());
+		});
+		ModBlocks.IRON_NON_SLIP_WALKWAY_SLABS.getBlocks().forEach(block -> {
+			dropSelf(block.get());
+		});
 
-		dropSelf(ModBlocks.RUSTED_IRON_PLATE.get());
-		dropSelf(ModBlocks.RUSTED_IRON_PLATE_STAIRS.get());
-		dropSelf(ModBlocks.RUSTED_IRON_PLATE_SLAB.get());
+		// Iron Plate
+		ModBlocks.IRON_PLATE_BLOCKS.getBlocks().forEach(block -> {
+			dropSelf(block.get());
+		});
+		ModBlocks.IRON_PLATE_STAIRS.getBlocks().forEach(block -> {
+			dropSelf(block.get());
+		});
+		ModBlocks.IRON_PLATE_SLABS.getBlocks().forEach(block -> {
+			dropSelf(block.get());
+		});
 
-		dropSelf(ModBlocks.IRON_TRUSS.get());
-		
-		dropSelf(ModBlocks.RUSTED_IRON_TRUSS.get());
+		// Iron Grating
+		ModBlocks.IRON_GRATING_BLOCKS.getBlocks().forEach(block -> {
+			dropSelf(block.get());
+		});
+		ModBlocks.IRON_GRATING_STAIRS.getBlocks().forEach(block -> {
+			dropSelf(block.get());
+		});
+		ModBlocks.IRON_GRATING_SLABS.getBlocks().forEach(block -> {
+			dropSelf(block.get());
+		});
+		ModBlocks.IRON_GRATING_PANES.getBlocks().forEach(block -> {
+			dropSelf(block.get());
+		});
+
+		// Iron Truss
+		ModBlocks.IRON_TRUSS_BLOCKS.getBlocks().forEach(block -> {
+			dropSelf(block.get());
+		});
 		
 		dropSelf(ModBlocks.WHITE_CINDER_BLOCK_BRICKS.get());
 		dropSelf(ModBlocks.WHITE_CINDER_BLOCK_BRICKS_STAIRS.get());
@@ -58,23 +79,34 @@ public class FactoryMadeBlockLootTables extends BlockLoot {
 		dropSelf(ModBlocks.BROWN_CINDER_BLOCK_BRICKS.get());
 		dropSelf(ModBlocks.BROWN_CINDER_BLOCK_BRICKS_STAIRS.get());
 		dropSelf(ModBlocks.BROWN_CINDER_BLOCK_BRICKS_SLAB.get());
-		
-		dropSelf(ModBlocks.CONCRETE_SIDING.get());
-		dropSelf(ModBlocks.CONCRETE_SIDING_STAIRS.get());
-		dropSelf(ModBlocks.CONCRETE_SIDING_SLAB.get());
-		
-		dropSelf(ModBlocks.WEATHERED_CONCRETE_SIDING.get());
-		dropSelf(ModBlocks.WEATHERED_CONCRETE_SIDING_STAIRS.get());
-		dropSelf(ModBlocks.WEATHERED_CONCRETE_SIDING_SLAB.get());
-		
-		dropSelf(ModBlocks.BLACK_ASBESTOS_TILES.get());
-		dropSelf(ModBlocks.BLACK_ASBESTOS_TILES_STAIRS.get());
-		dropSelf(ModBlocks.BLACK_ASBESTOS_TILES_SLAB.get());
-		
-		dropSelf(ModBlocks.WHITE_ASBESTOS_TILES.get());
-		dropSelf(ModBlocks.WHITE_ASBESTOS_TILES_STAIRS.get());
-		dropSelf(ModBlocks.WHITE_ASBESTOS_TILES_SLAB.get());
-		
+
+		// Concrete Siding
+		ModBlocks.CONCRETE_SIDING_BLOCKS.getBlocks().forEach(blockReg -> {
+			dropSelf(blockReg.get());
+		});
+		ModBlocks.CONCRETE_SIDING_STAIRS.getBlocks().forEach(blockReg -> {
+			dropSelf(blockReg.get());
+		});
+		ModBlocks.CONCRETE_SIDING_SLABS.getBlocks().forEach(blockReg -> {
+			dropSelf(blockReg.get());
+		});
+
+		// Asbestos Tiles
+		ModBlocks.ASBESTOS_TILES_BLOCKS.getBlocks().forEach(blockReg -> {
+			dropSelf(blockReg.get());
+		});
+		ModBlocks.ASBESTOS_TILES_STAIRS.getBlocks().forEach(blockReg -> {
+			dropSelf(blockReg.get());
+		});
+		ModBlocks.ASBESTOS_TILES_SLABS.getBlocks().forEach(blockReg -> {
+			dropSelf(blockReg.get());
+		});
+
+		// Computer
+		ModBlocks.COMPUTER_BLOCKS.getBlocks().forEach(blockReg -> {
+			dropSelf(blockReg.get());
+		});
+
 		dropSelf(ModBlocks.FLUORESCENT_LIGHT_PANEL.get());
 		dropSelf(ModBlocks.FLUORESCENT_LIGHT_PANEL_SLAB.get());
 

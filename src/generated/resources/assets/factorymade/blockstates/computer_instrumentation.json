@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "factorymade:block/computer_instrumentation",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "factorymade:block/computer_instrumentation"
+    },
+    "facing=south": {
+      "model": "factorymade:block/computer_instrumentation",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "factorymade:block/computer_instrumentation",
+      "y": 270
+    }
+  }
+}

@@ -1,8 +1,0 @@
-{
-  "type": "factorymade:industrial_shaper",
-  "count": 1,
-  "ingredient": {
-    "item": "factorymade:concrete_siding"
-  },
-  "result": "factorymade:concrete_siding_stairs"
-}

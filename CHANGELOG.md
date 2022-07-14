@@ -1,3 +1,11 @@
+### v1.19-1.1.0-6
+
+ - Refactor registry to use block variants
+ - Add Iron Grating
+ - Add more Asbestos Tiles variants
+ - Add Computer Blocks
+ - Refactor Iron Plate texture
+
 ### v1.19-1.0.4-5
 
  - Fix slab recipe to return 6 instead of 3 

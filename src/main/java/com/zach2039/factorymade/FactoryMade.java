@@ -2,13 +2,12 @@ package com.zach2039.factorymade;
 
 import javax.annotation.Nonnull;
 
+import com.zach2039.factorymade.init.*;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraftforge.registries.MissingMappingsEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
-import com.zach2039.factorymade.init.ModBlocks;
-import com.zach2039.factorymade.init.ModCrafting;
-import com.zach2039.factorymade.init.ModMenuTypes;
-import com.zach2039.factorymade.init.ModRecipeTypes;
 
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
@@ -37,7 +36,7 @@ public class FactoryMade
     	//FactoryMadeConfig.register(ModLoadingContext.get());
 
 		final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-		
+
 		ModBlocks.initialize(modEventBus);
 		ModMenuTypes.initialize(modEventBus);
 		ModRecipeTypes.initialize(modEventBus);
@@ -55,7 +54,7 @@ public class FactoryMade
 	public static void enqueue(final InterModEnqueueEvent event) {
 
 	}
-	
+
 	public static final CreativeModeTab CREATIVE_MODE_TAB = new CreativeModeTab(MODID)
 	{
 		@Override

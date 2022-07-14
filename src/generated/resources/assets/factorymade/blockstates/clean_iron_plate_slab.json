@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "factorymade:block/clean_iron_plate_slab"
+    },
+    "type=double": {
+      "model": "factorymade:block/clean_iron_plate"
+    },
+    "type=top": {
+      "model": "factorymade:block/clean_iron_plate_slab_top"
+    }
+  }
+}

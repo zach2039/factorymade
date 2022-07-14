@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "factorymade:block/iron_non_slip_walkway",
-    "side": "factorymade:block/iron_non_slip_walkway",
-    "top": "factorymade:block/iron_non_slip_walkway"
-  }
-}

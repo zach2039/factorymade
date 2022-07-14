@@ -17,15 +17,16 @@ import com.zach2039.factorymade.init.ModBlocks;
 import com.zach2039.factorymade.util.EnumFaceRotation;
 import com.zach2039.factorymade.util.ModRegistryUtil;
 
+import com.zach2039.factorymade.world.level.block.variant.ComputerBlockVariant;
+import com.zach2039.factorymade.world.level.block.variant.SimpleConcreteBlockVariant;
+import com.zach2039.factorymade.world.level.block.variant.SimpleMetalBlockVariant;
 import net.minecraft.client.renderer.block.model.ItemTransforms.TransformType;
 import net.minecraft.core.Direction;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.RotatedPillarBlock;
-import net.minecraft.world.level.block.SlabBlock;
-import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
@@ -124,100 +125,127 @@ public class FactoryMadeBlockStateProvider extends BlockStateProvider {
 		
 		// Iron Non-Slip Walkway
 		{
-			Block block = ModBlocks.IRON_NON_SLIP_WALKWAY.get();
-			StairBlock stair = ModBlocks.IRON_NON_SLIP_WALKWAY_STAIRS.get();
-			SlabBlock slab = ModBlocks.IRON_NON_SLIP_WALKWAY_SLAB.get();
-			
-			simpleBlock(block);
-			simpleBlockItem(block);
-			
-			stairsBlock(stair, modLoc("block/iron_non_slip_walkway"));
-			simpleBlockItem(stair);
-			
-			slabBlock(slab, modLoc("block/iron_non_slip_walkway"), modLoc("block/iron_non_slip_walkway"));
-			simpleBlockItem(slab);
-		}
-		
-		// Rusted Iron Non-Slip Walkway
-		{
-			Block block = ModBlocks.RUSTED_IRON_NON_SLIP_WALKWAY.get();
-			StairBlock stair = ModBlocks.RUSTED_IRON_NON_SLIP_WALKWAY_STAIRS.get();
-			SlabBlock slab = ModBlocks.RUSTED_IRON_NON_SLIP_WALKWAY_SLAB.get();
-			
-			simpleBlock(block);
-			simpleBlockItem(block);
-			
-			stairsBlock(stair, modLoc("block/rusted_iron_non_slip_walkway"));
-			simpleBlockItem(stair);
-			
-			slabBlock(slab, modLoc("block/rusted_iron_non_slip_walkway"), modLoc("block/rusted_iron_non_slip_walkway"));
-			simpleBlockItem(slab);
+			ModBlocks.IRON_NON_SLIP_WALKWAY_BLOCKS
+					.getBlocks()
+					.forEach(block -> {
+						simpleBlock(block.get());
+						simpleBlockItem(block.get());
+					});
+
+			ModBlocks.IRON_NON_SLIP_WALKWAY_STAIRS
+					.getBlocks()
+					.forEach(block -> {
+						ResourceLocation baseTexture = blockTexture(
+								ModBlocks.IRON_NON_SLIP_WALKWAY_BLOCKS.getBlock((SimpleMetalBlockVariant) block.get().getType()).get()
+						);
+
+						stairsBlock(block.get(), baseTexture);
+						simpleBlockItem(block.get());
+					});
+
+			ModBlocks.IRON_NON_SLIP_WALKWAY_SLABS
+					.getBlocks()
+					.forEach(block -> {
+						ResourceLocation baseTexture = blockTexture(
+								ModBlocks.IRON_NON_SLIP_WALKWAY_BLOCKS.getBlock((SimpleMetalBlockVariant) block.get().getType()).get()
+						);
+
+						slabBlock(block.get(), baseTexture, baseTexture);
+						simpleBlockItem(block.get());
+					});
 		}
 
 		// Iron Plate
 		{
-			Block block = ModBlocks.IRON_PLATE.get();
-			StairBlock stair = ModBlocks.IRON_PLATE_STAIRS.get();
-			SlabBlock slab = ModBlocks.IRON_PLATE_SLAB.get();
+			ModBlocks.IRON_PLATE_BLOCKS
+					.getBlocks()
+					.forEach(block -> {
+						simpleBlock(block.get());
+						simpleBlockItem(block.get());
+					});
 
-			simpleBlock(block);
-			simpleBlockItem(block);
+			ModBlocks.IRON_PLATE_STAIRS
+					.getBlocks()
+					.forEach(block -> {
+						ResourceLocation baseTexture = blockTexture(
+								ModBlocks.IRON_PLATE_BLOCKS.getBlock((SimpleMetalBlockVariant) block.get().getType()).get()
+						);
 
-			stairsBlock(stair, modLoc("block/iron_plate"));
-			simpleBlockItem(stair);
+						stairsBlock(block.get(), baseTexture);
+						simpleBlockItem(block.get());
+					});
 
-			slabBlock(slab, modLoc("block/iron_plate"), modLoc("block/iron_plate"));
-			simpleBlockItem(slab);
+			ModBlocks.IRON_PLATE_SLABS
+					.getBlocks()
+					.forEach(block -> {
+						ResourceLocation baseTexture = blockTexture(
+								ModBlocks.IRON_PLATE_BLOCKS.getBlock((SimpleMetalBlockVariant) block.get().getType()).get()
+						);
+
+						slabBlock(block.get(), baseTexture, baseTexture);
+						simpleBlockItem(block.get());
+					});
 		}
 
-		// Rusted Iron Plate
+		// Iron Grating
 		{
-			Block block = ModBlocks.RUSTED_IRON_PLATE.get();
-			StairBlock stair = ModBlocks.RUSTED_IRON_PLATE_STAIRS.get();
-			SlabBlock slab = ModBlocks.RUSTED_IRON_PLATE_SLAB.get();
+			ModBlocks.IRON_GRATING_BLOCKS
+					.getBlocks()
+					.forEach(block -> {
+						simpleBlock(block.get());
+						simpleBlockItem(block.get());
+					});
 
-			simpleBlock(block);
-			simpleBlockItem(block);
+			ModBlocks.IRON_GRATING_STAIRS
+					.getBlocks()
+					.forEach(block -> {
+						ResourceLocation baseTexture = blockTexture(
+								ModBlocks.IRON_GRATING_BLOCKS.getBlock((SimpleMetalBlockVariant) block.get().getType()).get()
+						);
 
-			stairsBlock(stair, modLoc("block/rusted_iron_plate"));
-			simpleBlockItem(stair);
+						stairsBlock(block.get(), baseTexture);
+						simpleBlockItem(block.get());
+					});
 
-			slabBlock(slab, modLoc("block/rusted_iron_plate"), modLoc("block/rusted_iron_plate"));
-			simpleBlockItem(slab);
+			ModBlocks.IRON_GRATING_SLABS
+					.getBlocks()
+					.forEach(block -> {
+						ResourceLocation baseTexture = blockTexture(
+								ModBlocks.IRON_GRATING_BLOCKS.getBlock((SimpleMetalBlockVariant) block.get().getType()).get()
+						);
+
+						slabBlock(block.get(), baseTexture, baseTexture);
+						simpleBlockItem(block.get());
+					});
+
+			ModBlocks.IRON_GRATING_PANES
+					.getBlocks()
+					.forEach(block -> {
+						ResourceLocation baseTexture = blockTexture(
+								ModBlocks.IRON_GRATING_BLOCKS.getBlock((SimpleMetalBlockVariant) block.get().getType()).get()
+						);
+
+						paneBlock(block.get(), baseTexture, baseTexture);
+					});
 		}
 
 		// Iron Truss
 		{
-			RotatedPillarBlock block = ModBlocks.IRON_TRUSS.get();
+			ModBlocks.IRON_TRUSS_BLOCKS
+					.getBlocks()
+					.forEach(block -> {
+						final var model = models().cube(name(block.get()),
+								modLoc("block/" + name(block.get()) + "_end"),
+								modLoc("block/" + name(block.get()) + "_end"),
+								modLoc("block/" + name(block.get()) + "_side"),
+								modLoc("block/" + name(block.get()) + "_side"),
+								modLoc("block/" + name(block.get()) + "_side_flipped"),
+								modLoc("block/" + name(block.get()) + "_side_flipped")
+						).texture("particle", modLoc( "block/" + name(block.get()) + "_end"));
 
-			final var model = models().cube(name(block), 
-					modLoc("block/iron_truss_end"),
-					modLoc("block/iron_truss_end"),
-					modLoc("block/iron_truss_side"),
-					modLoc("block/iron_truss_side"), 
-					modLoc("block/iron_truss_side_flipped"),
-					modLoc("block/iron_truss_side_flipped")
-					).texture("particle", modLoc("block/iron_truss_end"));
-			
-			axisBlock(block, model, model);
-			simpleBlockItem(block);
-		}
-		
-		// Rusted Iron Truss
-		{
-			RotatedPillarBlock block = ModBlocks.RUSTED_IRON_TRUSS.get();
-
-			final var model = models().cube(name(block), 
-					modLoc("block/rusted_iron_truss_end"),
-					modLoc("block/rusted_iron_truss_end"),
-					modLoc("block/rusted_iron_truss_side"),
-					modLoc("block/rusted_iron_truss_side"), 
-					modLoc("block/rusted_iron_truss_side_flipped"),
-					modLoc("block/rusted_iron_truss_side_flipped")
-					).texture("particle", modLoc("block/rusted_iron_truss_end"));
-			
-			axisBlock(block, model, model);
-			simpleBlockItem(block);
+						axisBlock(block.get(), model, model);
+						simpleBlockItem(block.get());
+					});
 		}
 		
 		// Cinder Block Bricks
@@ -261,32 +289,99 @@ public class FactoryMadeBlockStateProvider extends BlockStateProvider {
 		
 		// Concrete Siding
 		{
-			blockStairSlab(
-					ModBlocks.CONCRETE_SIDING.get(),
-					ModBlocks.CONCRETE_SIDING_STAIRS.get(),
-					ModBlocks.CONCRETE_SIDING_SLAB.get()
-					);
-			
-			blockStairSlab(
-					ModBlocks.WEATHERED_CONCRETE_SIDING.get(),
-					ModBlocks.WEATHERED_CONCRETE_SIDING_STAIRS.get(),
-					ModBlocks.WEATHERED_CONCRETE_SIDING_SLAB.get()
-					);
+			ModBlocks.CONCRETE_SIDING_BLOCKS
+					.getBlocks()
+					.forEach(block -> {
+						simpleBlock(block.get());
+						simpleBlockItem(block.get());
+					});
+
+			ModBlocks.CONCRETE_SIDING_STAIRS
+					.getBlocks()
+					.forEach(block -> {
+						ResourceLocation baseTexture = blockTexture(
+								ModBlocks.CONCRETE_SIDING_BLOCKS.getBlock((SimpleConcreteBlockVariant) block.get().getType()).get()
+						);
+
+						stairsBlock(block.get(), baseTexture);
+						simpleBlockItem(block.get());
+					});
+
+			ModBlocks.CONCRETE_SIDING_SLABS
+					.getBlocks()
+					.forEach(block -> {
+						ResourceLocation baseTexture = blockTexture(
+								ModBlocks.CONCRETE_SIDING_BLOCKS.getBlock((SimpleConcreteBlockVariant) block.get().getType()).get()
+						);
+
+						slabBlock(block.get(), baseTexture, baseTexture);
+						simpleBlockItem(block.get());
+					});
 		}
 		
 		// Asbestos Tiles
 		{
-			blockStairSlab(
-					ModBlocks.BLACK_ASBESTOS_TILES.get(),
-					ModBlocks.BLACK_ASBESTOS_TILES_STAIRS.get(),
-					ModBlocks.BLACK_ASBESTOS_TILES_SLAB.get()
-					);
-			
-			blockStairSlab(
-					ModBlocks.WHITE_ASBESTOS_TILES.get(),
-					ModBlocks.WHITE_ASBESTOS_TILES_STAIRS.get(),
-					ModBlocks.WHITE_ASBESTOS_TILES_SLAB.get()
-					);
+			ModBlocks.ASBESTOS_TILES_BLOCKS
+					.getBlocks()
+					.forEach(blockReg -> {
+						final var block = blockReg.get();
+
+						final var modelFile = models().cubeAll(
+								"block/asbestos_tiles/" + name(block),
+								modLoc("block/asbestos_tiles/" + name(block))
+						);
+
+						simpleBlock(block, modelFile);
+						simpleBlockItem(block, modelFile);
+					});
+
+			ModBlocks.ASBESTOS_TILES_STAIRS
+					.getBlocks()
+					.forEach(blockReg -> {
+						final var block = blockReg.get();
+						final var baseBlock = ModBlocks.ASBESTOS_TILES_BLOCKS.getBlock((DyeColor) block.getType()).get();
+
+						ResourceLocation baseTexture = modLoc("block/asbestos_tiles/" + name(baseBlock));
+
+						stairsBlock(block, baseTexture);
+						simpleBlockItem(block);
+					});
+
+			ModBlocks.ASBESTOS_TILES_SLABS
+					.getBlocks()
+					.forEach(blockReg -> {
+						final var block = blockReg.get();
+						final var baseBlock = ModBlocks.ASBESTOS_TILES_BLOCKS.getBlock((DyeColor) block.getType()).get();
+
+						ResourceLocation baseTexture = modLoc("block/asbestos_tiles/" + name(baseBlock));
+
+						slabBlock(block, baseTexture, baseTexture);
+						simpleBlockItem(block);
+					});
+		}
+
+		// Computer
+		{
+			ModBlocks.COMPUTER_BLOCKS
+					.getBlocks()
+					.forEach(blockReg -> {
+						final var block = blockReg.get();
+
+						final var sideTexture = (block.getType() == ComputerBlockVariant.CASING_BASE) ?
+								modLoc("block/computer/computer_casing_base") : modLoc("block/computer/computer_casing");
+
+						final var model = models().cube(name(block),
+								modLoc("block/computer/computer_casing"),
+								modLoc("block/computer/computer_casing"),
+								modLoc("block/computer/" + name(block)),
+								sideTexture,
+								sideTexture,
+								sideTexture
+						).texture("particle", modLoc("block/computer/computer_casing"));
+
+						horizontalBlock(block, model);
+						simpleBlockItem(block);
+					});
 		}
 		
 		// Fluorescent Light Panel

@@ -1,0 +1,8 @@
+{
+  "type": "factorymade:industrial_shaper",
+  "count": 4,
+  "ingredient": {
+    "item": "minecraft:lime_concrete"
+  },
+  "result": "factorymade:lime_asbestos_tiles"
+}
