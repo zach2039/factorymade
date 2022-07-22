@@ -1,12 +1,11 @@
 package com.zach2039.factorymade.world.level.block.variantgroup;
 
-import java.util.Collection;
-
 import com.zach2039.factorymade.registry.IVariantGroup;
-
 import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.RegistryObject;
+
+import java.util.Collection;
 
 /**
  * A group consisting of a collection of variants with one or more blocks registered for each one.

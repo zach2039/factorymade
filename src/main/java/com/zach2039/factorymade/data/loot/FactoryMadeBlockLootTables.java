@@ -2,7 +2,6 @@ package com.zach2039.factorymade.data.loot;
 
 import com.zach2039.factorymade.init.ModBlocks;
 import com.zach2039.factorymade.util.ModRegistryUtil;
-
 import net.minecraft.data.loot.BlockLoot;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.ForgeRegistries;

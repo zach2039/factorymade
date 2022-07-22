@@ -1,12 +1,9 @@
 package com.zach2039.factorymade.client.gui.inventory;
 
-import java.util.List;
-
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.zach2039.factorymade.world.inventory.menu.IndustrialShaperMenu;
 import com.zach2039.factorymade.world.item.crafting.recipe.IndustrialShaperRecipe;
-
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.renderer.GameRenderer;
@@ -18,6 +15,8 @@ import net.minecraft.util.Mth;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+
+import java.util.List;
 
 @OnlyIn(Dist.CLIENT)
 public class IndustrialShaperScreen extends AbstractContainerScreen<IndustrialShaperMenu> {

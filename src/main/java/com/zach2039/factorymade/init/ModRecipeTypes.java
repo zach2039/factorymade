@@ -1,11 +1,7 @@
 package com.zach2039.factorymade.init;
 
-import java.util.Optional;
-import java.util.function.Supplier;
-
 import com.zach2039.factorymade.FactoryMade;
 import com.zach2039.factorymade.world.item.crafting.recipe.IndustrialShaperRecipe;
-
 import net.minecraft.core.Registry;
 import net.minecraft.world.Container;
 import net.minecraft.world.item.crafting.Recipe;
@@ -14,6 +10,9 @@ import net.minecraft.world.level.Level;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
+
+import java.util.Optional;
+import java.util.function.Supplier;
 
 public class ModRecipeTypes {
 	public static final DeferredRegister<RecipeType<?>> RECIPES = DeferredRegister.create(Registry.RECIPE_TYPE_REGISTRY, FactoryMade.MODID);

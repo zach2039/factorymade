@@ -1,14 +1,7 @@
 package com.zach2039.factorymade.client.gui;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Optional;
-
-import org.slf4j.Logger;
-
 import com.mojang.logging.LogUtils;
 import com.zach2039.factorymade.FactoryMade;
-
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.FriendlyByteBuf;
@@ -17,6 +10,11 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
+import org.slf4j.Logger;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Optional;
 
 /**
  * Handles this mod's client-side GUI factories

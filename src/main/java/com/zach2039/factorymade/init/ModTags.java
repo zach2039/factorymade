@@ -1,7 +1,6 @@
 package com.zach2039.factorymade.init;
 
 import com.zach2039.factorymade.FactoryMade;
-
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;

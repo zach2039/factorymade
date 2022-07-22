@@ -1,14 +1,10 @@
 package com.zach2039.factorymade.world.inventory.menu;
 
-import java.util.List;
-
 import com.google.common.collect.Lists;
 import com.zach2039.factorymade.init.ModBlocks;
-import com.zach2039.factorymade.init.ModCrafting;
 import com.zach2039.factorymade.init.ModMenuTypes;
 import com.zach2039.factorymade.init.ModRecipeTypes;
 import com.zach2039.factorymade.world.item.crafting.recipe.IndustrialShaperRecipe;
-
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -16,18 +12,13 @@ import net.minecraft.world.Container;
 import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.inventory.ContainerLevelAccess;
-import net.minecraft.world.inventory.DataSlot;
-import net.minecraft.world.inventory.MenuType;
-import net.minecraft.world.inventory.ResultContainer;
-import net.minecraft.world.inventory.Slot;
+import net.minecraft.world.inventory.*;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.crafting.RecipeType;
-import net.minecraft.world.item.crafting.StonecutterRecipe;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.network.IContainerFactory;
+
+import java.util.List;
 
 public class IndustrialShaperMenu extends AbstractContainerMenu {
 	public static final int INPUT_SLOT = 0;

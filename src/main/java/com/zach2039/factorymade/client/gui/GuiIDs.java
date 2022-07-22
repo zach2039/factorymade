@@ -1,7 +1,6 @@
 package com.zach2039.factorymade.client.gui;
 
 import com.zach2039.factorymade.FactoryMade;
-
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.resources.ResourceLocation;

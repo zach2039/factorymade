@@ -1,20 +1,13 @@
 package com.zach2039.factorymade.init;
 
 import com.zach2039.factorymade.FactoryMade;
-import com.zach2039.factorymade.data.FactoryMadeBlockStateProvider;
-import com.zach2039.factorymade.data.FactoryMadeBlockTagsProvider;
-import com.zach2039.factorymade.data.FactoryMadeItemModelProvider;
-import com.zach2039.factorymade.data.FactoryMadeItemTagsProvider;
-import com.zach2039.factorymade.data.FactoryMadeLanguageProvider;
-import com.zach2039.factorymade.data.FactoryMadeLootTableProvider;
-import com.zach2039.factorymade.data.FactoryMadeRecipeProvider;
-
+import com.zach2039.factorymade.data.*;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
-import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 
 @Mod.EventBusSubscriber(modid = FactoryMade.MODID, bus = Bus.MOD)
 public class ModDataProviders {

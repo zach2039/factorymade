@@ -2,7 +2,6 @@ package com.zach2039.factorymade.world.level.block.variant;
 
 import com.zach2039.factorymade.util.ModStringUtil;
 import net.minecraft.util.StringRepresentable;
-import net.minecraft.world.item.DyeColor;
 
 public enum ComputerBlockVariant implements StringRepresentable {
 	CASING("casing"),

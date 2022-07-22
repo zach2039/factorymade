@@ -2,8 +2,8 @@ package com.zach2039.factorymade.init;
 
 import com.google.common.base.Supplier;
 import com.zach2039.factorymade.FactoryMade;
-import com.zach2039.factorymade.world.level.block.*;
-
+import com.zach2039.factorymade.world.level.block.IndustrialShaperBlock;
+import com.zach2039.factorymade.world.level.block.IndustrialWallLightBlock;
 import com.zach2039.factorymade.world.level.block.base.*;
 import com.zach2039.factorymade.world.level.block.variant.ComputerBlockVariant;
 import com.zach2039.factorymade.world.level.block.variant.SimpleConcreteBlockVariant;
@@ -16,7 +16,10 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SlabBlock;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;

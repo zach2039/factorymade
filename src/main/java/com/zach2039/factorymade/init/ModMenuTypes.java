@@ -2,7 +2,6 @@ package com.zach2039.factorymade.init;
 
 import com.zach2039.factorymade.FactoryMade;
 import com.zach2039.factorymade.world.inventory.menu.IndustrialShaperMenu;
-
 import net.minecraft.world.inventory.MenuType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -18,7 +17,7 @@ import net.minecraftforge.registries.RegistryObject;
  * @author zach2039
  */
 public class ModMenuTypes {
-	private static final DeferredRegister<MenuType<?>> MENU_TYPES = DeferredRegister.create(ForgeRegistries.CONTAINERS, FactoryMade.MODID);
+	private static final DeferredRegister<MenuType<?>> MENU_TYPES = DeferredRegister.create(ForgeRegistries.MENU_TYPES, FactoryMade.MODID);
 
 	private static boolean isInitialized;
 

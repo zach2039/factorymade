@@ -1,25 +1,22 @@
 package com.zach2039.factorymade;
 
-import javax.annotation.Nonnull;
-
-import com.zach2039.factorymade.init.*;
-import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraftforge.registries.MissingMappingsEvent;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
+import com.zach2039.factorymade.init.ModBlocks;
+import com.zach2039.factorymade.init.ModCrafting;
+import com.zach2039.factorymade.init.ModMenuTypes;
+import com.zach2039.factorymade.init.ModRecipeTypes;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.network.simple.SimpleChannel;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import javax.annotation.Nonnull;
 
 @Mod(FactoryMade.MODID)
 @Mod.EventBusSubscriber(modid = FactoryMade.MODID, bus = Bus.MOD)

@@ -1,10 +1,10 @@
 package com.zach2039.factorymade.registry;
 
-import java.util.Collection;
-import java.util.Iterator;
-
 import net.minecraft.util.StringRepresentable;
 import net.minecraftforge.registries.RegistryObject;
+
+import java.util.Collection;
+import java.util.Iterator;
 
 /**
  * @author Choonster

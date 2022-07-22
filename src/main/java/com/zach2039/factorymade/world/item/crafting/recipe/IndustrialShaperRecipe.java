@@ -4,7 +4,6 @@ import com.google.gson.JsonObject;
 import com.zach2039.factorymade.init.ModBlocks;
 import com.zach2039.factorymade.init.ModCrafting;
 import com.zach2039.factorymade.init.ModRecipeTypes;
-
 import net.minecraft.core.Registry;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;

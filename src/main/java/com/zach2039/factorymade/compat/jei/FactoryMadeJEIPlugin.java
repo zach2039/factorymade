@@ -1,13 +1,9 @@
 package com.zach2039.factorymade.compat.jei;
 
-import java.util.List;
-import java.util.function.Predicate;
-
 import com.zach2039.factorymade.FactoryMade;
 import com.zach2039.factorymade.compat.jei.category.IndustrialShaperRecipeCategory;
 import com.zach2039.factorymade.init.ModBlocks;
 import com.zach2039.factorymade.init.ModCrafting;
-
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
 import mezz.jei.api.helpers.IGuiHelper;
@@ -20,6 +16,9 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.RecipeManager;
 import net.minecraft.world.item.crafting.RecipeSerializer;
+
+import java.util.List;
+import java.util.function.Predicate;
 
 @JeiPlugin
 public class FactoryMadeJEIPlugin implements IModPlugin {

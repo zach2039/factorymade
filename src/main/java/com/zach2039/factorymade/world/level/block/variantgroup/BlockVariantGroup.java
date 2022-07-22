@@ -1,16 +1,9 @@
 package com.zach2039.factorymade.world.level.block.variantgroup;
 
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Map;
-
-import javax.annotation.Nullable;
-
 import com.google.common.base.Function;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.ImmutableMap;
 import com.zach2039.factorymade.FactoryMade;
-
 import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -18,6 +11,11 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
+
+import javax.annotation.Nullable;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Map;
 
 /**
  * A group consisting of a collection of variants with a block registered for each one.

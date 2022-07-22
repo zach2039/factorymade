@@ -1,3 +1,7 @@
+### v1.19-1.1.1-7
+
+ - Update to Forge 41.0.98 
+
 ### v1.19-1.1.0-6
 
  - Refactor registry to use block variants

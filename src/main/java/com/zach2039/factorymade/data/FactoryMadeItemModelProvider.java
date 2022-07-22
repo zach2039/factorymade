@@ -1,13 +1,9 @@
 package com.zach2039.factorymade.data;
 
-import java.util.function.Supplier;
-
 import com.google.common.base.Preconditions;
 import com.zach2039.factorymade.FactoryMade;
-import com.zach2039.factorymade.fluid.group.FluidGroup;
 import com.zach2039.factorymade.init.ModBlocks;
 import com.zach2039.factorymade.util.ModRegistryUtil;
-
 import com.zach2039.factorymade.world.level.block.variant.SimpleMetalBlockVariant;
 import net.minecraft.client.renderer.block.model.ItemTransforms.TransformType;
 import net.minecraft.data.DataGenerator;
@@ -16,10 +12,13 @@ import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.Fluids;
-import net.minecraftforge.client.model.generators.*;
-import net.minecraftforge.client.model.generators.loaders.DynamicBucketModelBuilder;
+import net.minecraftforge.client.model.generators.ItemModelBuilder;
+import net.minecraftforge.client.model.generators.ItemModelProvider;
+import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.common.util.Lazy;
+
+import java.util.function.Supplier;
 
 /**
  * Taken from <a href="https://github.com/Choonster-Minecraft-Mods/TestMod3">TestMod3</a> on Github
@@ -146,25 +145,4 @@ public class FactoryMadeItemModelProvider extends ItemModelProvider {
 		withExistingParent(name(item), mcLoc("template_spawn_egg"));
 	}
 
-	private void bucketItem(final FluidGroup<?, ?, ?, ?, ?> fluidGroup) {
-		final Item item = fluidGroup.getBucket().get();
-		final Fluid fluid = item instanceof BucketItem ? ((BucketItem) item).getFluid() : Fluids.EMPTY;
-
-		getBuilder(name(item))
-				.parent(getExistingFile(new ResourceLocation("forge", "bucket")))
-				.customLoader(DynamicBucketModelBuilder::begin)
-				.fluid(fluid)
-				.flipGas(true)
-				.end();
-	}
-
-	private void bucketItem(final Item item) {
-		getBuilder(name(item))
-				.parent(getExistingFile(new ResourceLocation("forge", "bucket")))
-				.texture("base", itemTexture(item) + "_base")
-				.customLoader(DynamicBucketModelBuilder::begin)
-				.fluid(Fluids.EMPTY)
-				.flipGas(true)
-				.end();
-	}
 }

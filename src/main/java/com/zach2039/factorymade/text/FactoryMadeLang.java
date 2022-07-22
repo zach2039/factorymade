@@ -1,7 +1,6 @@
 package com.zach2039.factorymade.text;
 
 import com.zach2039.factorymade.FactoryMade;
-
 import net.minecraft.Util;
 import net.minecraft.resources.ResourceLocation;
 

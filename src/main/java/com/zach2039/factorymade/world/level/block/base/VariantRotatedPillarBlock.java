@@ -3,7 +3,6 @@ package com.zach2039.factorymade.world.level.block.base;
 import com.zach2039.factorymade.world.level.block.variant.IBlockVariant;
 import com.zach2039.factorymade.world.level.block.variantgroup.BlockVariantGroup;
 import net.minecraft.util.StringRepresentable;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 
 public class VariantRotatedPillarBlock extends RotatedPillarBlock implements IBlockVariant {

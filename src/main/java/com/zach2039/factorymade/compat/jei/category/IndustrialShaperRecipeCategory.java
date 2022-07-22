@@ -4,7 +4,6 @@ import com.zach2039.factorymade.FactoryMade;
 import com.zach2039.factorymade.compat.jei.JEIRecipeTypes;
 import com.zach2039.factorymade.init.ModBlocks;
 import com.zach2039.factorymade.world.item.crafting.recipe.IndustrialShaperRecipe;
-
 import mezz.jei.api.constants.ModIds;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
@@ -17,7 +16,6 @@ import mezz.jei.api.recipe.category.IRecipeCategory;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.block.Blocks;
 
 public class IndustrialShaperRecipeCategory implements IRecipeCategory<IndustrialShaperRecipe> {
 	public static final ResourceLocation UID = new ResourceLocation(FactoryMade.MODID, "industrial_shaper");

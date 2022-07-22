@@ -1,22 +1,11 @@
 package com.zach2039.factorymade.data;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.EnumMap;
-import java.util.List;
-import java.util.Map;
-import java.util.function.Function;
-import java.util.function.Supplier;
-
 import com.google.common.base.Preconditions;
 import com.google.common.collect.ImmutableMap;
 import com.zach2039.factorymade.FactoryMade;
-import com.zach2039.factorymade.fluid.BasicFluidType;
-import com.zach2039.factorymade.fluid.group.FluidGroup;
 import com.zach2039.factorymade.init.ModBlocks;
 import com.zach2039.factorymade.util.EnumFaceRotation;
 import com.zach2039.factorymade.util.ModRegistryUtil;
-
 import com.zach2039.factorymade.world.level.block.variant.ComputerBlockVariant;
 import com.zach2039.factorymade.world.level.block.variant.SimpleConcreteBlockVariant;
 import com.zach2039.factorymade.world.level.block.variant.SimpleMetalBlockVariant;
@@ -26,7 +15,9 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SlabBlock;
+import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
@@ -35,6 +26,10 @@ import net.minecraftforge.client.model.generators.ModelBuilder;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.common.util.Lazy;
+
+import java.util.*;
+import java.util.function.Function;
+import java.util.function.Supplier;
 
 /**
  * Taken from <a href="https://github.com/Choonster-Minecraft-Mods/TestMod3">TestMod3</a> on Github
@@ -487,20 +482,6 @@ public class FactoryMadeBlockStateProvider extends BlockStateProvider {
 							.rotationY(getRotationY(direction))
 							.build();
 				});
-	}
-
-	private void fluidBlock(final FluidGroup<?, ?, ?, ?, ?> fluidGroup) {
-		// We can't use the RenderProperties for the fluid type as they're not initialised in datagen
-		if (!(fluidGroup.getType().get() instanceof BasicFluidType basicFluidType)) {
-			throw new IllegalArgumentException("Fluid type must extend BasicFluidType");
-		}
-
-		final var block = fluidGroup.getBlock().get();
-
-		final var model = models().getBuilder(name(block))
-				.texture("particle", basicFluidType.getStillTexture());
-
-		simpleBlock(block, model);
 	}
 
 	private void blockStairSlab(final Block block, final StairBlock stair, final SlabBlock slab) {		

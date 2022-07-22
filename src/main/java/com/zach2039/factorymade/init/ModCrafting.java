@@ -1,11 +1,7 @@
 package com.zach2039.factorymade.init;
 
-import java.util.Map;
-import java.util.stream.Collectors;
-
 import com.zach2039.factorymade.FactoryMade;
 import com.zach2039.factorymade.world.item.crafting.recipe.IndustrialShaperRecipe;
-
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.Container;
 import net.minecraft.world.item.crafting.Recipe;
@@ -16,6 +12,9 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+
+import java.util.Map;
+import java.util.stream.Collectors;
 
 /**
  * Taken from <a href="https://github.com/Choonster-Minecraft-Mods/TestMod3">TestMod3</a> on Github

@@ -1,7 +1,6 @@
 package com.zach2039.factorymade;
 
 import com.zach2039.factorymade.init.ModBlocks;
-
 import com.zach2039.factorymade.world.level.block.variant.SimpleMetalBlockVariant;
 import net.minecraft.core.NonNullList;
 import net.minecraft.world.item.CreativeModeTab;

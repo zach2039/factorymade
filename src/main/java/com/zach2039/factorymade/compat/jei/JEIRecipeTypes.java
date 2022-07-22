@@ -2,7 +2,6 @@ package com.zach2039.factorymade.compat.jei;
 
 import com.zach2039.factorymade.init.ModRecipeTypes;
 import com.zach2039.factorymade.world.item.crafting.recipe.IndustrialShaperRecipe;
-
 import mezz.jei.api.recipe.RecipeType;
 import net.minecraft.world.item.crafting.Recipe;
 

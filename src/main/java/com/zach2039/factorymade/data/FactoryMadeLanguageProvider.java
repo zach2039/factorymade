@@ -1,21 +1,11 @@
 package com.zach2039.factorymade.data;
 
-import java.util.HashMap;
-import java.util.Locale;
-import java.util.Map;
-import java.util.function.Supplier;
-
 import com.zach2039.factorymade.FactoryMade;
-import com.zach2039.factorymade.fluid.group.FluidGroup;
 import com.zach2039.factorymade.init.ModBlocks;
 import com.zach2039.factorymade.text.FactoryMadeLang;
 import com.zach2039.factorymade.util.ModStringUtil;
-import com.zach2039.factorymade.world.level.block.variant.ComputerBlockVariant;
-import com.zach2039.factorymade.world.level.block.variant.IBlockVariant;
 import com.zach2039.factorymade.world.level.block.IndustrialShaperBlock;
-
-import com.zach2039.factorymade.world.level.block.variant.SimpleConcreteBlockVariant;
-import com.zach2039.factorymade.world.level.block.variant.SimpleMetalBlockVariant;
+import com.zach2039.factorymade.world.level.block.variant.ComputerBlockVariant;
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.util.StringRepresentable;
@@ -29,6 +19,10 @@ import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraftforge.common.data.LanguageProvider;
 import net.minecraftforge.fluids.FluidType;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.function.Supplier;
 
 /**
  * Taken from <a href="https://github.com/Choonster-Minecraft-Mods/TestMod3">TestMod3</a> on Github
@@ -269,18 +263,6 @@ public class FactoryMadeLanguageProvider extends LanguageProvider {
 
 	private void add(final FactoryMadeLang lang, final String value) {
 		add(lang.getTranslationKey(), value);
-	}
-	
-	private <
-	TYPE extends FluidType,
-	STILL extends Fluid, FLOWING extends Fluid,
-	BLOCK extends LiquidBlock, BUCKET extends Item,
-	GROUP extends FluidGroup<TYPE, STILL, FLOWING, BLOCK, BUCKET>
-	>
-	void addFluidGroup(final GROUP group, final String name) {
-		add(group.getType().get().getDescriptionId(), name);
-		addBlock(group.getBlock(), name);
-		addItem(group.getBucket(), String.format("%s Bucket", name));
 	}
 	
 	private void addPatchouliBookPage(final String key, final String value) {		

@@ -2,7 +2,6 @@ package com.zach2039.factorymade.data.recipes;
 
 import com.google.gson.JsonObject;
 import com.zach2039.factorymade.util.ModJsonUtil;
-
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.item.ItemStack;

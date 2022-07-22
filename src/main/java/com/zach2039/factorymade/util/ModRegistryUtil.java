@@ -1,14 +1,7 @@
 package com.zach2039.factorymade.util;
 
-import java.util.Optional;
-import java.util.Set;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
-import java.util.stream.StreamSupport;
-
 import com.google.common.base.Preconditions;
 import com.zach2039.factorymade.FactoryMade;
-
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.Item;
@@ -18,6 +11,12 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.IForgeRegistry;
+
+import java.util.Optional;
+import java.util.Set;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+import java.util.stream.StreamSupport;
 
 /**
  * Utility methods for Forge registries.
@@ -81,13 +80,6 @@ public class ModRegistryUtil {
 	/**
 	 * @see #getKey(IForgeRegistry, Object)
 	 */
-	public static ResourceLocation getKey(final EntityType<?> entityType) {
-		return getKey(ForgeRegistries.ENTITIES, entityType);
-	}
-
-	/**
-	 * @see #getKey(IForgeRegistry, Object)
-	 */
 	public static ResourceLocation getKey(final Fluid fluid) {
 		return getKey(ForgeRegistries.FLUIDS, fluid);
 	}
@@ -97,12 +89,5 @@ public class ModRegistryUtil {
 	 */
 	public static ResourceLocation getKey(final Potion potion) {
 		return getKey(ForgeRegistries.POTIONS, potion);
-	}
-
-	/**
-	 * @see #getKey(IForgeRegistry, Object)
-	 */
-	public static ResourceLocation getKey(final BlockEntityType<?> type) {
-		return getKey(ForgeRegistries.BLOCK_ENTITIES, type);
 	}
 }

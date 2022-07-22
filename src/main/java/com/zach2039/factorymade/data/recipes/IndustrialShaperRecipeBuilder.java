@@ -2,7 +2,6 @@ package com.zach2039.factorymade.data.recipes;
 
 import com.zach2039.factorymade.init.ModCrafting;
 import com.zach2039.factorymade.world.item.crafting.recipe.IndustrialShaperRecipe;
-
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;

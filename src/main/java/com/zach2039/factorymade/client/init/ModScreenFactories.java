@@ -4,7 +4,6 @@ import com.google.common.base.Preconditions;
 import com.zach2039.factorymade.client.gui.ClientScreenManager;
 import com.zach2039.factorymade.client.gui.inventory.IndustrialShaperScreen;
 import com.zach2039.factorymade.init.ModMenuTypes;
-
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.multiplayer.ClientLevel;

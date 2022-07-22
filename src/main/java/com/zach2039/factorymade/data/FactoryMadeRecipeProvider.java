@@ -1,14 +1,10 @@
 package com.zach2039.factorymade.data;
 
-import java.util.function.Consumer;
-
 import com.zach2039.factorymade.FactoryMade;
 import com.zach2039.factorymade.data.recipes.IndustrialShaperRecipeBuilder;
 import com.zach2039.factorymade.init.ModBlocks;
 import com.zach2039.factorymade.util.ModRegistryUtil;
-
 import com.zach2039.factorymade.world.level.block.variant.ComputerBlockVariant;
-import com.zach2039.factorymade.world.level.block.variant.IBlockVariant;
 import com.zach2039.factorymade.world.level.block.variant.SimpleConcreteBlockVariant;
 import com.zach2039.factorymade.world.level.block.variant.SimpleMetalBlockVariant;
 import net.minecraft.data.DataGenerator;
@@ -20,8 +16,9 @@ import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.*;
-import net.minecraftforge.common.Tags;
 import net.minecraftforge.registries.ForgeRegistries;
+
+import java.util.function.Consumer;
 
 public class FactoryMadeRecipeProvider extends RecipeProvider {
 

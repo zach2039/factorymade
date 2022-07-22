@@ -1,13 +1,12 @@
 package com.zach2039.factorymade.data;
 
-import javax.annotation.Nullable;
-
 import com.zach2039.factorymade.FactoryMade;
-
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
+
+import javax.annotation.Nullable;
 
 /**
  * Taken from <a href="https://github.com/Choonster-Minecraft-Mods/TestMod3">TestMod3</a> on Github

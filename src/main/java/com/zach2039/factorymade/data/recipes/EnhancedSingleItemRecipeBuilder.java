@@ -1,24 +1,12 @@
 package com.zach2039.factorymade.data.recipes;
 
-import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-import java.util.List;
-import java.util.Map;
-import java.util.function.Consumer;
-
-import javax.annotation.Nullable;
-
 import com.google.common.base.Preconditions;
-import com.google.gson.JsonObject;
 import com.zach2039.factorymade.util.ModRegistryUtil;
-
 import net.minecraft.advancements.Advancement;
 import net.minecraft.advancements.AdvancementRewards;
 import net.minecraft.advancements.CriterionTriggerInstance;
 import net.minecraft.advancements.RequirementsStrategy;
 import net.minecraft.advancements.critereon.RecipeUnlockedTrigger;
-import net.minecraft.core.Registry;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.SingleItemRecipeBuilder;
 import net.minecraft.resources.ResourceLocation;
@@ -29,6 +17,12 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.SingleItemRecipe;
 import net.minecraftforge.fml.util.ObfuscationReflectionHelper;
+
+import javax.annotation.Nullable;
+import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.util.function.Consumer;
 
 /**
  * An extension of {@link SingleItemRecipeBuilder} that allows the recipe result to have NBT and a custom group name for
