@@ -3,15 +3,13 @@ package com.zach2039.factorymade.data;
 import com.google.common.base.Preconditions;
 import com.zach2039.factorymade.FactoryMade;
 import com.zach2039.factorymade.init.ModBlocks;
-import com.zach2039.factorymade.util.ModRegistryUtil;
+import com.zach2039.factorymade.util.RegistryUtil;
 import com.zach2039.factorymade.world.level.block.variant.SimpleMetalBlockVariant;
+import com.zach2039.factorymade.world.level.block.variant.SimpleNonCorrosiveMetalBlockVariant;
 import net.minecraft.client.renderer.block.model.ItemTransforms.TransformType;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.material.Fluid;
-import net.minecraft.world.level.material.Fluids;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
@@ -83,9 +81,23 @@ public class FactoryMadeItemModelProvider extends ItemModelProvider {
 					.forEach(block -> {
 						withGeneratedParent(
 								block.get().asItem(),
-								modLoc("block/" + ModRegistryUtil.getKey(
+								modLoc("block/" + RegistryUtil.getKey(
 										ModBlocks.IRON_GRATING_BLOCKS.getBlock((SimpleMetalBlockVariant) block.get().getType()).get()
 										).getPath())
+						);
+					});
+		}
+
+		// Lead Grating Panes
+		{
+			ModBlocks.LEAD_GRATING_PANES
+					.getBlocks()
+					.forEach(block -> {
+						withGeneratedParent(
+								block.get().asItem(),
+								modLoc("block/" + RegistryUtil.getKey(
+										ModBlocks.LEAD_GRATING_BLOCKS.getBlock((SimpleNonCorrosiveMetalBlockVariant) block.get().getType()).get()
+								).getPath())
 						);
 					});
 		}
@@ -93,7 +105,7 @@ public class FactoryMadeItemModelProvider extends ItemModelProvider {
 
 
 	private ResourceLocation registryName(final Item item) {
-		return Preconditions.checkNotNull(ModRegistryUtil.getKey(item), "Item %s has a null registry name", item);
+		return Preconditions.checkNotNull(RegistryUtil.getKey(item), "Item %s has a null registry name", item);
 	}
 
 	private String name(final Item item) {

@@ -3,18 +3,23 @@ package com.zach2039.factorymade.data;
 import com.zach2039.factorymade.FactoryMade;
 import com.zach2039.factorymade.data.recipes.IndustrialShaperRecipeBuilder;
 import com.zach2039.factorymade.init.ModBlocks;
-import com.zach2039.factorymade.util.ModRegistryUtil;
+import com.zach2039.factorymade.init.ModTags;
+import com.zach2039.factorymade.util.RegistryUtil;
 import com.zach2039.factorymade.world.level.block.variant.ComputerBlockVariant;
 import com.zach2039.factorymade.world.level.block.variant.SimpleConcreteBlockVariant;
 import com.zach2039.factorymade.world.level.block.variant.SimpleMetalBlockVariant;
+import com.zach2039.factorymade.world.level.block.variant.SimpleNonCorrosiveMetalBlockVariant;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.*;
 import net.minecraftforge.registries.ForgeRegistries;
 
@@ -48,7 +53,7 @@ public class FactoryMadeRecipeProvider extends RecipeProvider {
 			ModBlocks.IRON_NON_SLIP_WALKWAY_BLOCKS.getBlocks().forEach(block -> {
 				addBlockStairSlab(recipeConsumer,
 						Blocks.IRON_BLOCK,
-						block.get(), 16,
+						block.get(), 8,
 						ModBlocks.IRON_NON_SLIP_WALKWAY_STAIRS.getBlock((SimpleMetalBlockVariant) block.get().getType()).get(),
 						ModBlocks.IRON_NON_SLIP_WALKWAY_SLABS.getBlock((SimpleMetalBlockVariant) block.get().getType()).get()
 				);
@@ -60,7 +65,7 @@ public class FactoryMadeRecipeProvider extends RecipeProvider {
 			ModBlocks.IRON_PLATE_BLOCKS.getBlocks().forEach(block -> {
 				addBlockStairSlab(recipeConsumer,
 						Blocks.IRON_BLOCK,
-						block.get(), 16,
+						block.get(), 8,
 						ModBlocks.IRON_PLATE_STAIRS.getBlock((SimpleMetalBlockVariant) block.get().getType()).get(),
 						ModBlocks.IRON_PLATE_SLABS.getBlock((SimpleMetalBlockVariant) block.get().getType()).get()
 				);
@@ -72,7 +77,7 @@ public class FactoryMadeRecipeProvider extends RecipeProvider {
 			ModBlocks.IRON_GRATING_BLOCKS.getBlocks().forEach(block -> {
 				addBlockStairSlabPane(recipeConsumer,
 						Blocks.IRON_BLOCK,
-						block.get(), 16,
+						block.get(), 8,
 						ModBlocks.IRON_GRATING_STAIRS.getBlock((SimpleMetalBlockVariant) block.get().getType()).get(),
 						ModBlocks.IRON_GRATING_SLABS.getBlock((SimpleMetalBlockVariant) block.get().getType()).get(),
 						ModBlocks.IRON_GRATING_PANES.getBlock((SimpleMetalBlockVariant) block.get().getType()).get()
@@ -85,7 +90,54 @@ public class FactoryMadeRecipeProvider extends RecipeProvider {
 			ModBlocks.IRON_TRUSS_BLOCKS.getBlocks().forEach(block -> {
 				addBlockRecipe(recipeConsumer,
 						Blocks.IRON_BLOCK,
-						block.get(), 16
+						block.get(), 8
+				);
+			});
+		}
+
+		// Lead Non-Slip Walkway
+		{
+			ModBlocks.LEAD_NON_SLIP_WALKWAY_BLOCKS.getBlocks().forEach(block -> {
+				addBlockStairSlab(recipeConsumer,
+						ModTags.Items.STORAGE_BLOCKS_LEAD,
+						block.get(), 8,
+						ModBlocks.LEAD_NON_SLIP_WALKWAY_STAIRS.getBlock((SimpleNonCorrosiveMetalBlockVariant) block.get().getType()).get(),
+						ModBlocks.LEAD_NON_SLIP_WALKWAY_SLABS.getBlock((SimpleNonCorrosiveMetalBlockVariant) block.get().getType()).get()
+				);
+			});
+		}
+
+		// Lead Plate
+		{
+			ModBlocks.LEAD_PLATE_BLOCKS.getBlocks().forEach(block -> {
+				addBlockStairSlab(recipeConsumer,
+						ModTags.Items.STORAGE_BLOCKS_LEAD,
+						block.get(), 8,
+						ModBlocks.LEAD_PLATE_STAIRS.getBlock((SimpleNonCorrosiveMetalBlockVariant) block.get().getType()).get(),
+						ModBlocks.LEAD_PLATE_SLABS.getBlock((SimpleNonCorrosiveMetalBlockVariant) block.get().getType()).get()
+				);
+			});
+		}
+
+		// Lead Grating
+		{
+			ModBlocks.LEAD_GRATING_BLOCKS.getBlocks().forEach(block -> {
+				addBlockStairSlabPane(recipeConsumer,
+						ModTags.Items.STORAGE_BLOCKS_LEAD,
+						block.get(), 8,
+						ModBlocks.LEAD_GRATING_STAIRS.getBlock((SimpleNonCorrosiveMetalBlockVariant) block.get().getType()).get(),
+						ModBlocks.LEAD_GRATING_SLABS.getBlock((SimpleNonCorrosiveMetalBlockVariant) block.get().getType()).get(),
+						ModBlocks.LEAD_GRATING_PANES.getBlock((SimpleNonCorrosiveMetalBlockVariant) block.get().getType()).get()
+				);
+			});
+		}
+
+		// Lead Truss
+		{
+			ModBlocks.LEAD_TRUSS_BLOCKS.getBlocks().forEach(block -> {
+				addBlockRecipe(recipeConsumer,
+						ModTags.Items.STORAGE_BLOCKS_LEAD,
+						block.get(), 8
 				);
 			});
 		}
@@ -206,7 +258,13 @@ public class FactoryMadeRecipeProvider extends RecipeProvider {
 	private void addBlockRecipe(final Consumer<FinishedRecipe> recipeConsumer, Block inputBlock, Block outputBlock, int count) {
 		IndustrialShaperRecipeBuilder.industrialshaper(Ingredient.of(inputBlock), outputBlock, count)
 				.unlockedBy("has_block", has(inputBlock))
-				.save(recipeConsumer, new ResourceLocation(FactoryMade.MODID, ModRegistryUtil.getKey(outputBlock).getPath()));
+				.save(recipeConsumer, new ResourceLocation(FactoryMade.MODID, RegistryUtil.getKey(outputBlock).getPath()));
+	}
+
+	private void addBlockRecipe(final Consumer<FinishedRecipe> recipeConsumer, TagKey<Item> inputBlock, Block outputBlock, int count) {
+		IndustrialShaperRecipeBuilder.industrialshaper(Ingredient.of(inputBlock), outputBlock, count)
+				.unlockedBy("has_block", has(inputBlock))
+				.save(recipeConsumer, new ResourceLocation(FactoryMade.MODID, RegistryUtil.getKey(outputBlock).getPath()));
 	}
 
 	private void addPaneRecipe(final Consumer<FinishedRecipe> recipeConsumer, Block inputBlock, IronBarsBlock outputPane) {
@@ -215,7 +273,7 @@ public class FactoryMadeRecipeProvider extends RecipeProvider {
 				.pattern("BBB")
 				.define('B', Ingredient.of(inputBlock))
 				.unlockedBy("has_block", has(inputBlock))
-				.save(recipeConsumer, new ResourceLocation(FactoryMade.MODID, ModRegistryUtil.getKey(inputBlock).getPath() + "_pane"));
+				.save(recipeConsumer, new ResourceLocation(FactoryMade.MODID, RegistryUtil.getKey(inputBlock).getPath() + "_pane"));
 	}
 
 	private void addSlabRecipes(final Consumer<FinishedRecipe> recipeConsumer, Block inputBlock, SlabBlock outputSlab) {
@@ -223,11 +281,11 @@ public class FactoryMadeRecipeProvider extends RecipeProvider {
 						.pattern("BBB")
 						.define('B', Ingredient.of(inputBlock))
 						.unlockedBy("has_block", has(inputBlock))
-						.save(recipeConsumer, new ResourceLocation(FactoryMade.MODID, ModRegistryUtil.getKey(inputBlock).getPath() + "_slab"));
+						.save(recipeConsumer, new ResourceLocation(FactoryMade.MODID, RegistryUtil.getKey(inputBlock).getPath() + "_slab"));
 		
 		IndustrialShaperRecipeBuilder.industrialshaper(Ingredient.of(inputBlock), outputSlab, 2)
 						.unlockedBy("has_block", has(inputBlock))
-						.save(recipeConsumer, new ResourceLocation(FactoryMade.MODID, ModRegistryUtil.getKey(inputBlock).getPath() + "_slab_from_shaper"));
+						.save(recipeConsumer, new ResourceLocation(FactoryMade.MODID, RegistryUtil.getKey(inputBlock).getPath() + "_slab_from_shaper"));
 	}
 	
 	private void addStairRecipes(final Consumer<FinishedRecipe> recipeConsumer, Block inputBlock, StairBlock outputStair) {
@@ -237,20 +295,31 @@ public class FactoryMadeRecipeProvider extends RecipeProvider {
 						.pattern("BBB")
 						.define('B', Ingredient.of(inputBlock))
 						.unlockedBy("has_block", has(inputBlock))
-						.save(recipeConsumer, new ResourceLocation(FactoryMade.MODID, ModRegistryUtil.getKey(inputBlock).getPath() + "_stair"));
+						.save(recipeConsumer, new ResourceLocation(FactoryMade.MODID, RegistryUtil.getKey(inputBlock).getPath() + "_stair"));
 		
 		IndustrialShaperRecipeBuilder.industrialshaper(Ingredient.of(inputBlock), outputStair, 1)
 						.unlockedBy("has_block", has(inputBlock))
-						.save(recipeConsumer, new ResourceLocation(FactoryMade.MODID, ModRegistryUtil.getKey(inputBlock).getPath() + "_stair_from_shaper"));
+						.save(recipeConsumer, new ResourceLocation(FactoryMade.MODID, RegistryUtil.getKey(inputBlock).getPath() + "_stair_from_shaper"));
 	}
 	
 	private void addBlockStairSlab(final Consumer<FinishedRecipe> recipeConsumer, Block inputBlock, Block outputBlock, int count, StairBlock outputStair, SlabBlock outputSlab) {
-		addBlockRecipe(recipeConsumer,inputBlock, outputBlock, count);
+		addBlockRecipe(recipeConsumer, inputBlock, outputBlock, count);
+		addStairRecipes(recipeConsumer, outputBlock, outputStair);
+		addSlabRecipes(recipeConsumer, outputBlock, outputSlab);
+	}
+
+	private void addBlockStairSlab(final Consumer<FinishedRecipe> recipeConsumer, TagKey<Item> inputBlock, Block outputBlock, int count, StairBlock outputStair, SlabBlock outputSlab) {
+		addBlockRecipe(recipeConsumer, inputBlock, outputBlock, count);
 		addStairRecipes(recipeConsumer, outputBlock, outputStair);
 		addSlabRecipes(recipeConsumer, outputBlock, outputSlab);
 	}
 
 	private void addBlockStairSlabPane(final Consumer<FinishedRecipe> recipeConsumer, Block inputBlock, Block outputBlock, int count, StairBlock outputStair, SlabBlock outputSlab, IronBarsBlock outputPane) {
+		addBlockStairSlab(recipeConsumer, inputBlock, outputBlock, count, outputStair, outputSlab);
+		addPaneRecipe(recipeConsumer, outputBlock, outputPane);
+	}
+
+	private void addBlockStairSlabPane(final Consumer<FinishedRecipe> recipeConsumer, TagKey<Item> inputBlock, Block outputBlock, int count, StairBlock outputStair, SlabBlock outputSlab, IronBarsBlock outputPane) {
 		addBlockStairSlab(recipeConsumer, inputBlock, outputBlock, count, outputStair, outputSlab);
 		addPaneRecipe(recipeConsumer, outputBlock, outputPane);
 	}

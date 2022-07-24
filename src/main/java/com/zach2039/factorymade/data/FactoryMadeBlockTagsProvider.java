@@ -70,6 +70,47 @@ public class FactoryMadeBlockTagsProvider extends BlockTagsProvider {
 			pickaxeMinable.add(block.get());
 		});
 
+		// Lead Plate
+		ModBlocks.LEAD_PLATE_BLOCKS.getBlocks().forEach(block -> {
+			pickaxeMinable.add(block.get());
+		});
+		ModBlocks.LEAD_PLATE_STAIRS.getBlocks().forEach(block -> {
+			pickaxeMinable.add(block.get());
+		});
+		ModBlocks.LEAD_PLATE_SLABS.getBlocks().forEach(block -> {
+			pickaxeMinable.add(block.get());
+		});
+
+		// Lead Non-Slip Walkway
+		ModBlocks.LEAD_NON_SLIP_WALKWAY_BLOCKS.getBlocks().forEach(block -> {
+			pickaxeMinable.add(block.get());
+		});
+		ModBlocks.LEAD_NON_SLIP_WALKWAY_STAIRS.getBlocks().forEach(block -> {
+			pickaxeMinable.add(block.get());
+		});
+		ModBlocks.LEAD_NON_SLIP_WALKWAY_SLABS.getBlocks().forEach(block -> {
+			pickaxeMinable.add(block.get());
+		});
+
+		// Lead Grating
+		ModBlocks.LEAD_GRATING_BLOCKS.getBlocks().forEach(block -> {
+			pickaxeMinable.add(block.get());
+		});
+		ModBlocks.LEAD_GRATING_STAIRS.getBlocks().forEach(block -> {
+			pickaxeMinable.add(block.get());
+		});
+		ModBlocks.LEAD_GRATING_SLABS.getBlocks().forEach(block -> {
+			pickaxeMinable.add(block.get());
+		});
+		ModBlocks.LEAD_GRATING_PANES.getBlocks().forEach(block -> {
+			pickaxeMinable.add(block.get());
+		});
+
+		// Lead Truss
+		ModBlocks.LEAD_TRUSS_BLOCKS.getBlocks().forEach(block -> {
+			pickaxeMinable.add(block.get());
+		});
+
 		// Concrete Siding
 		ModBlocks.CONCRETE_SIDING_BLOCKS.getBlocks().forEach(block -> {
 			pickaxeMinable.add(block.get());

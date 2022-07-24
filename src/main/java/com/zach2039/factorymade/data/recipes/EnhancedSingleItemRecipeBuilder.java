@@ -1,7 +1,7 @@
 package com.zach2039.factorymade.data.recipes;
 
 import com.google.common.base.Preconditions;
-import com.zach2039.factorymade.util.ModRegistryUtil;
+import com.zach2039.factorymade.util.RegistryUtil;
 import net.minecraft.advancements.Advancement;
 import net.minecraft.advancements.AdvancementRewards;
 import net.minecraft.advancements.CriterionTriggerInstance;
@@ -88,7 +88,7 @@ public class EnhancedSingleItemRecipeBuilder<
 	@Override
 	public void save(final Consumer<FinishedRecipe> consumer) {
 		final Item item = result.getItem();
-		save(consumer, ModRegistryUtil.getKey(item));
+		save(consumer, RegistryUtil.getKey(item));
 	}
 	
 	/**
@@ -97,7 +97,7 @@ public class EnhancedSingleItemRecipeBuilder<
 	 */
 	@Override
 	public void save(final Consumer<FinishedRecipe> consumer, final String save) {
-		final ResourceLocation key = ModRegistryUtil.getKey(result.getItem());
+		final ResourceLocation key = RegistryUtil.getKey(result.getItem());
 		if (new ResourceLocation(save).equals(key)) {
 			throw new IllegalStateException("Shaped Recipe " + save + " should remove its 'save' argument");
 		} else {

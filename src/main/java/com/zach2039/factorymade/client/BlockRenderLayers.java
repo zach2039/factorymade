@@ -21,6 +21,7 @@ public class BlockRenderLayers
 	{
 		setRenderLayer(ModBlocks.INDUSTRIAL_WALL_LIGHT, RenderType.translucent(), RenderType.cutoutMipped());
 
+		// Iron Grating
 		ModBlocks.IRON_GRATING_BLOCKS.getBlocks().forEach(block ->
 			setRenderLayer(block, RenderType.translucent(), RenderType.cutoutMipped())
 		);
@@ -32,6 +33,20 @@ public class BlockRenderLayers
 		);
 		ModBlocks.IRON_GRATING_PANES.getBlocks().forEach(block ->
 			setRenderLayer(block, RenderType.translucent(), RenderType.cutoutMipped())
+		);
+
+		// Lead Grating
+		ModBlocks.LEAD_GRATING_BLOCKS.getBlocks().forEach(block ->
+				setRenderLayer(block, RenderType.translucent(), RenderType.cutoutMipped())
+		);
+		ModBlocks.LEAD_GRATING_STAIRS.getBlocks().forEach(block ->
+				setRenderLayer(block, RenderType.translucent(), RenderType.cutoutMipped())
+		);
+		ModBlocks.LEAD_GRATING_SLABS.getBlocks().forEach(block ->
+				setRenderLayer(block, RenderType.translucent(), RenderType.cutoutMipped())
+		);
+		ModBlocks.LEAD_GRATING_PANES.getBlocks().forEach(block ->
+				setRenderLayer(block, RenderType.translucent(), RenderType.cutoutMipped())
 		);
 	}
 

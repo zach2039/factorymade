@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "factorymade:block/clean_lead_grating"
+  }
+}

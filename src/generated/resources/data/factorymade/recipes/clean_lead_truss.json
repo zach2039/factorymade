@@ -1,0 +1,8 @@
+{
+  "type": "factorymade:industrial_shaper",
+  "count": 8,
+  "ingredient": {
+    "tag": "forge:storage_blocks/lead"
+  },
+  "result": "factorymade:clean_lead_truss"
+}

@@ -127,6 +127,69 @@ public class FactoryMadeLanguageProvider extends LanguageProvider {
 			String prefix = (!variantName.equals("clean")) ? ModStringUtil.capitalize(variantName + " ") : "";
 			addBlock(block, prefix + "Iron Truss");
 		});
+
+		// Lead Non-Slip Walkway
+		ModBlocks.LEAD_NON_SLIP_WALKWAY_BLOCKS.getBlocks().forEach(block -> {
+			String variantName = block.get().getType().getSerializedName();
+			String prefix = (!variantName.equals("clean")) ? ModStringUtil.capitalize(variantName + " ") : "";
+			addBlock(block, prefix + "Lead Non-Slip Walkway");
+		});
+		ModBlocks.LEAD_NON_SLIP_WALKWAY_STAIRS.getBlocks().forEach(block -> {
+			String variantName = block.get().getType().getSerializedName();
+			String prefix = (!variantName.equals("clean")) ? ModStringUtil.capitalize(variantName + " ") : "";
+			addBlock(block, prefix + "Lead Non-Slip Walkway Stairs");
+		});
+		ModBlocks.LEAD_NON_SLIP_WALKWAY_SLABS.getBlocks().forEach(block -> {
+			String variantName = block.get().getType().getSerializedName();
+			String prefix = (!variantName.equals("clean")) ? ModStringUtil.capitalize(variantName + " ") : "";
+			addBlock(block, prefix + "Lead Non-Slip Walkway Slab");
+		});
+
+		// Lead Plate
+		ModBlocks.LEAD_PLATE_BLOCKS.getBlocks().forEach(block -> {
+			String variantName = block.get().getType().getSerializedName();
+			String prefix = (!variantName.equals("clean")) ? ModStringUtil.capitalize(variantName + " ") : "";
+			addBlock(block, prefix + "Lead Plate");
+		});
+		ModBlocks.LEAD_PLATE_STAIRS.getBlocks().forEach(block -> {
+			String variantName = block.get().getType().getSerializedName();
+			String prefix = (!variantName.equals("clean")) ? ModStringUtil.capitalize(variantName + " ") : "";
+			addBlock(block, prefix + "Lead Plate Stairs");
+		});
+		ModBlocks.LEAD_PLATE_SLABS.getBlocks().forEach(block -> {
+			String variantName = block.get().getType().getSerializedName();
+			String prefix = (!variantName.equals("clean")) ? ModStringUtil.capitalize(variantName + " ") : "";
+			addBlock(block, prefix + "Lead Plate Slab");
+		});
+
+		// Lead Grating
+		ModBlocks.LEAD_GRATING_BLOCKS.getBlocks().forEach(block -> {
+			String variantName = block.get().getType().getSerializedName();
+			String prefix = (!variantName.equals("clean")) ? ModStringUtil.capitalize(variantName + " ") : "";
+			addBlock(block, prefix + "Lead Grating");
+		});
+		ModBlocks.LEAD_GRATING_STAIRS.getBlocks().forEach(block -> {
+			String variantName = block.get().getType().getSerializedName();
+			String prefix = (!variantName.equals("clean")) ? ModStringUtil.capitalize(variantName + " ") : "";
+			addBlock(block, prefix + "Lead Grating Stairs");
+		});
+		ModBlocks.LEAD_GRATING_SLABS.getBlocks().forEach(block -> {
+			String variantName = block.get().getType().getSerializedName();
+			String prefix = (!variantName.equals("clean")) ? ModStringUtil.capitalize(variantName + " ") : "";
+			addBlock(block, prefix + "Lead Grating Slab");
+		});
+		ModBlocks.LEAD_GRATING_PANES.getBlocks().forEach(block -> {
+			String variantName = block.get().getType().getSerializedName();
+			String prefix = (!variantName.equals("clean")) ? ModStringUtil.capitalize(variantName + " ") : "";
+			addBlock(block, prefix + "Lead Grating Pane");
+		});
+
+		// Lead Truss
+		ModBlocks.LEAD_TRUSS_BLOCKS.getBlocks().forEach(block -> {
+			String variantName = block.get().getType().getSerializedName();
+			String prefix = (!variantName.equals("clean")) ? ModStringUtil.capitalize(variantName + " ") : "";
+			addBlock(block, prefix + "Lead Truss");
+		});
 		
 		addBlock(ModBlocks.WHITE_CINDER_BLOCK_BRICKS, "White Cinder Block Bricks");
 		addBlock(ModBlocks.WHITE_CINDER_BLOCK_BRICKS_STAIRS, "White Cinder Block Bricks Stairs");

@@ -1,0 +1,8 @@
+{
+  "type": "factorymade:industrial_shaper",
+  "count": 1,
+  "ingredient": {
+    "item": "factorymade:clean_lead_grating"
+  },
+  "result": "factorymade:clean_lead_grating_stairs"
+}

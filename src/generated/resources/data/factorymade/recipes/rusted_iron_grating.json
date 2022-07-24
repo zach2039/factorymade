@@ -1,6 +1,6 @@
 {
   "type": "factorymade:industrial_shaper",
-  "count": 16,
+  "count": 8,
   "ingredient": {
     "item": "minecraft:iron_block"
   },

@@ -8,6 +8,7 @@ import com.zach2039.factorymade.world.level.block.base.*;
 import com.zach2039.factorymade.world.level.block.variant.ComputerBlockVariant;
 import com.zach2039.factorymade.world.level.block.variant.SimpleConcreteBlockVariant;
 import com.zach2039.factorymade.world.level.block.variant.SimpleMetalBlockVariant;
+import com.zach2039.factorymade.world.level.block.variant.SimpleNonCorrosiveMetalBlockVariant;
 import com.zach2039.factorymade.world.level.block.variantgroup.*;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.EntityType;
@@ -68,6 +69,27 @@ public class ModBlocks {
 			.slabFactory(VariantSlab::new)
 			.build();
 
+	// Lead Non-Slip Walkway
+	public static final BlockVariantGroup<SimpleNonCorrosiveMetalBlockVariant, VariantBlock> LEAD_NON_SLIP_WALKWAY_BLOCKS = BlockVariantGroup.Builder.<SimpleNonCorrosiveMetalBlockVariant, VariantBlock>create(BLOCKS, ITEMS)
+			.groupName("lead_non_slip_walkway")
+			.variants(SimpleNonCorrosiveMetalBlockVariant.values())
+			.blockPropertiesFactory(state -> ModBlockProperties.MEDIUM_METAL_PROPS)
+			.blockFactory(VariantBlock::new)
+			.build();
+	public static final StairBlockVariantGroup<SimpleNonCorrosiveMetalBlockVariant, VariantStair> LEAD_NON_SLIP_WALKWAY_STAIRS = StairBlockVariantGroup.Builder.<SimpleNonCorrosiveMetalBlockVariant, VariantStair>create(BLOCKS, ITEMS)
+			.groupName("lead_non_slip_walkway_stairs")
+			.variants(SimpleNonCorrosiveMetalBlockVariant.values())
+			.blockPropertiesFactory(state -> ModBlockProperties.MEDIUM_METAL_PROPS)
+			.blockStateProviderFactory(state -> () -> ModBlocks.LEAD_NON_SLIP_WALKWAY_BLOCKS.getBlock(state).get().defaultBlockState())
+			.stairFactory(VariantStair::new)
+			.build();
+	public static final SlabBlockVariantGroup<SimpleNonCorrosiveMetalBlockVariant, VariantSlab> LEAD_NON_SLIP_WALKWAY_SLABS = SlabBlockVariantGroup.Builder.<SimpleNonCorrosiveMetalBlockVariant, VariantSlab>create(BLOCKS, ITEMS)
+			.groupName("lead_non_slip_walkway_slab")
+			.variants(SimpleNonCorrosiveMetalBlockVariant.values())
+			.blockPropertiesFactory(state -> ModBlockProperties.MEDIUM_METAL_PROPS)
+			.slabFactory(VariantSlab::new)
+			.build();
+
 	// Iron Plate
 	public static final BlockVariantGroup<SimpleMetalBlockVariant, VariantBlock> IRON_PLATE_BLOCKS = BlockVariantGroup.Builder.<SimpleMetalBlockVariant, VariantBlock>create(BLOCKS, ITEMS)
 			.groupName("iron_plate")
@@ -85,6 +107,27 @@ public class ModBlocks {
 	public static final SlabBlockVariantGroup<SimpleMetalBlockVariant, VariantSlab> IRON_PLATE_SLABS = SlabBlockVariantGroup.Builder.<SimpleMetalBlockVariant, VariantSlab>create(BLOCKS, ITEMS)
 			.groupName("iron_plate_slab")
 			.variants(SimpleMetalBlockVariant.values())
+			.blockPropertiesFactory(state -> ModBlockProperties.MEDIUM_METAL_PROPS)
+			.slabFactory(VariantSlab::new)
+			.build();
+
+	// Lead Plate
+	public static final BlockVariantGroup<SimpleNonCorrosiveMetalBlockVariant, VariantBlock> LEAD_PLATE_BLOCKS = BlockVariantGroup.Builder.<SimpleNonCorrosiveMetalBlockVariant, VariantBlock>create(BLOCKS, ITEMS)
+			.groupName("lead_plate")
+			.variants(SimpleNonCorrosiveMetalBlockVariant.values())
+			.blockPropertiesFactory(state -> ModBlockProperties.MEDIUM_METAL_PROPS)
+			.blockFactory(VariantBlock::new)
+			.build();
+	public static final StairBlockVariantGroup<SimpleNonCorrosiveMetalBlockVariant, VariantStair> LEAD_PLATE_STAIRS = StairBlockVariantGroup.Builder.<SimpleNonCorrosiveMetalBlockVariant, VariantStair>create(BLOCKS, ITEMS)
+			.groupName("lead_plate_stairs")
+			.variants(SimpleNonCorrosiveMetalBlockVariant.values())
+			.blockPropertiesFactory(state -> ModBlockProperties.MEDIUM_METAL_PROPS)
+			.blockStateProviderFactory(state -> () -> ModBlocks.LEAD_PLATE_BLOCKS.getBlock(state).get().defaultBlockState())
+			.stairFactory(VariantStair::new)
+			.build();
+	public static final SlabBlockVariantGroup<SimpleNonCorrosiveMetalBlockVariant, VariantSlab> LEAD_PLATE_SLABS = SlabBlockVariantGroup.Builder.<SimpleNonCorrosiveMetalBlockVariant, VariantSlab>create(BLOCKS, ITEMS)
+			.groupName("lead_plate_slab")
+			.variants(SimpleNonCorrosiveMetalBlockVariant.values())
 			.blockPropertiesFactory(state -> ModBlockProperties.MEDIUM_METAL_PROPS)
 			.slabFactory(VariantSlab::new)
 			.build();
@@ -116,10 +159,45 @@ public class ModBlocks {
 			.paneFactory(VariantPane::new)
 			.build();
 
+	// Lead Grating
+	public static final GlassBlockVariantGroup<SimpleNonCorrosiveMetalBlockVariant, VariantGlassBlock> LEAD_GRATING_BLOCKS = GlassBlockVariantGroup.Builder.<SimpleNonCorrosiveMetalBlockVariant, VariantGlassBlock>create(BLOCKS, ITEMS)
+			.groupName("lead_grating")
+			.variants(SimpleNonCorrosiveMetalBlockVariant.values())
+			.blockPropertiesFactory(state -> ModBlockProperties.MEDIUM_METAL_GRATING_PROPS)
+			.blockFactory(VariantGlassBlock::new)
+			.build();
+	public static final GlassStairBlockVariantGroup<SimpleNonCorrosiveMetalBlockVariant, VariantGlassStair> LEAD_GRATING_STAIRS = GlassStairBlockVariantGroup.Builder.<SimpleNonCorrosiveMetalBlockVariant, VariantGlassStair>create(BLOCKS, ITEMS)
+			.groupName("lead_grating_stairs")
+			.variants(SimpleNonCorrosiveMetalBlockVariant.values())
+			.blockPropertiesFactory(state -> ModBlockProperties.MEDIUM_METAL_GRATING_PROPS)
+			.blockStateProviderFactory(state -> () -> ModBlocks.LEAD_GRATING_BLOCKS.getBlock(state).get().defaultBlockState())
+			.stairFactory(VariantGlassStair::new)
+			.build();
+	public static final GlassSlabBlockVariantGroup<SimpleNonCorrosiveMetalBlockVariant, VariantGlassSlab> LEAD_GRATING_SLABS = GlassSlabBlockVariantGroup.Builder.<SimpleNonCorrosiveMetalBlockVariant, VariantGlassSlab>create(BLOCKS, ITEMS)
+			.groupName("lead_grating_slab")
+			.variants(SimpleNonCorrosiveMetalBlockVariant.values())
+			.blockPropertiesFactory(state -> ModBlockProperties.MEDIUM_METAL_GRATING_PROPS)
+			.slabFactory(VariantGlassSlab::new)
+			.build();
+	public static final PaneBlockVariantGroup<SimpleNonCorrosiveMetalBlockVariant, VariantPane> LEAD_GRATING_PANES = PaneBlockVariantGroup.Builder.<SimpleNonCorrosiveMetalBlockVariant, VariantPane>create(BLOCKS, ITEMS)
+			.groupName("lead_grating_pane")
+			.variants(SimpleNonCorrosiveMetalBlockVariant.values())
+			.blockPropertiesFactory(state -> ModBlockProperties.MEDIUM_METAL_GRATING_PROPS)
+			.paneFactory(VariantPane::new)
+			.build();
+
 	// Iron Truss
 	public static final BlockVariantGroup<SimpleMetalBlockVariant, VariantRotatedPillarBlock> IRON_TRUSS_BLOCKS = BlockVariantGroup.Builder.<SimpleMetalBlockVariant, VariantRotatedPillarBlock>create(BLOCKS, ITEMS)
 			.groupName("iron_truss")
 			.variants(SimpleMetalBlockVariant.values())
+			.blockPropertiesFactory(state -> ModBlockProperties.MEDIUM_METAL_PROPS)
+			.blockFactory(VariantRotatedPillarBlock::new)
+			.build();
+
+	// Lead Truss
+	public static final BlockVariantGroup<SimpleNonCorrosiveMetalBlockVariant, VariantRotatedPillarBlock> LEAD_TRUSS_BLOCKS = BlockVariantGroup.Builder.<SimpleNonCorrosiveMetalBlockVariant, VariantRotatedPillarBlock>create(BLOCKS, ITEMS)
+			.groupName("lead_truss")
+			.variants(SimpleNonCorrosiveMetalBlockVariant.values())
 			.blockPropertiesFactory(state -> ModBlockProperties.MEDIUM_METAL_PROPS)
 			.blockFactory(VariantRotatedPillarBlock::new)
 			.build();

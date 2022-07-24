@@ -5,10 +5,11 @@ import com.google.common.collect.ImmutableMap;
 import com.zach2039.factorymade.FactoryMade;
 import com.zach2039.factorymade.init.ModBlocks;
 import com.zach2039.factorymade.util.EnumFaceRotation;
-import com.zach2039.factorymade.util.ModRegistryUtil;
+import com.zach2039.factorymade.util.RegistryUtil;
 import com.zach2039.factorymade.world.level.block.variant.ComputerBlockVariant;
 import com.zach2039.factorymade.world.level.block.variant.SimpleConcreteBlockVariant;
 import com.zach2039.factorymade.world.level.block.variant.SimpleMetalBlockVariant;
+import com.zach2039.factorymade.world.level.block.variant.SimpleNonCorrosiveMetalBlockVariant;
 import net.minecraft.client.renderer.block.model.ItemTransforms.TransformType;
 import net.minecraft.core.Direction;
 import net.minecraft.data.DataGenerator;
@@ -242,7 +243,132 @@ public class FactoryMadeBlockStateProvider extends BlockStateProvider {
 						simpleBlockItem(block.get());
 					});
 		}
-		
+
+		// Lead Non-Slip Walkway
+		{
+			ModBlocks.LEAD_NON_SLIP_WALKWAY_BLOCKS
+					.getBlocks()
+					.forEach(block -> {
+						simpleBlock(block.get());
+						simpleBlockItem(block.get());
+					});
+
+			ModBlocks.LEAD_NON_SLIP_WALKWAY_STAIRS
+					.getBlocks()
+					.forEach(block -> {
+						ResourceLocation baseTexture = blockTexture(
+								ModBlocks.LEAD_NON_SLIP_WALKWAY_BLOCKS.getBlock((SimpleNonCorrosiveMetalBlockVariant) block.get().getType()).get()
+						);
+
+						stairsBlock(block.get(), baseTexture);
+						simpleBlockItem(block.get());
+					});
+
+			ModBlocks.LEAD_NON_SLIP_WALKWAY_SLABS
+					.getBlocks()
+					.forEach(block -> {
+						ResourceLocation baseTexture = blockTexture(
+								ModBlocks.LEAD_NON_SLIP_WALKWAY_BLOCKS.getBlock((SimpleNonCorrosiveMetalBlockVariant) block.get().getType()).get()
+						);
+
+						slabBlock(block.get(), baseTexture, baseTexture);
+						simpleBlockItem(block.get());
+					});
+		}
+
+		// Lead Plate
+		{
+			ModBlocks.LEAD_PLATE_BLOCKS
+					.getBlocks()
+					.forEach(block -> {
+						simpleBlock(block.get());
+						simpleBlockItem(block.get());
+					});
+
+			ModBlocks.LEAD_PLATE_STAIRS
+					.getBlocks()
+					.forEach(block -> {
+						ResourceLocation baseTexture = blockTexture(
+								ModBlocks.LEAD_PLATE_BLOCKS.getBlock((SimpleNonCorrosiveMetalBlockVariant) block.get().getType()).get()
+						);
+
+						stairsBlock(block.get(), baseTexture);
+						simpleBlockItem(block.get());
+					});
+
+			ModBlocks.LEAD_PLATE_SLABS
+					.getBlocks()
+					.forEach(block -> {
+						ResourceLocation baseTexture = blockTexture(
+								ModBlocks.LEAD_PLATE_BLOCKS.getBlock((SimpleNonCorrosiveMetalBlockVariant) block.get().getType()).get()
+						);
+
+						slabBlock(block.get(), baseTexture, baseTexture);
+						simpleBlockItem(block.get());
+					});
+		}
+
+		// Lead Grating
+		{
+			ModBlocks.LEAD_GRATING_BLOCKS
+					.getBlocks()
+					.forEach(block -> {
+						simpleBlock(block.get());
+						simpleBlockItem(block.get());
+					});
+
+			ModBlocks.LEAD_GRATING_STAIRS
+					.getBlocks()
+					.forEach(block -> {
+						ResourceLocation baseTexture = blockTexture(
+								ModBlocks.LEAD_GRATING_BLOCKS.getBlock((SimpleNonCorrosiveMetalBlockVariant) block.get().getType()).get()
+						);
+
+						stairsBlock(block.get(), baseTexture);
+						simpleBlockItem(block.get());
+					});
+
+			ModBlocks.LEAD_GRATING_SLABS
+					.getBlocks()
+					.forEach(block -> {
+						ResourceLocation baseTexture = blockTexture(
+								ModBlocks.LEAD_GRATING_BLOCKS.getBlock((SimpleNonCorrosiveMetalBlockVariant) block.get().getType()).get()
+						);
+
+						slabBlock(block.get(), baseTexture, baseTexture);
+						simpleBlockItem(block.get());
+					});
+
+			ModBlocks.LEAD_GRATING_PANES
+					.getBlocks()
+					.forEach(block -> {
+						ResourceLocation baseTexture = blockTexture(
+								ModBlocks.LEAD_GRATING_BLOCKS.getBlock((SimpleNonCorrosiveMetalBlockVariant) block.get().getType()).get()
+						);
+
+						paneBlock(block.get(), baseTexture, baseTexture);
+					});
+		}
+
+		// Lead Truss
+		{
+			ModBlocks.LEAD_TRUSS_BLOCKS
+					.getBlocks()
+					.forEach(block -> {
+						final var model = models().cube(name(block.get()),
+								modLoc("block/" + name(block.get()) + "_end"),
+								modLoc("block/" + name(block.get()) + "_end"),
+								modLoc("block/" + name(block.get()) + "_side"),
+								modLoc("block/" + name(block.get()) + "_side"),
+								modLoc("block/" + name(block.get()) + "_side_flipped"),
+								modLoc("block/" + name(block.get()) + "_side_flipped")
+						).texture("particle", modLoc( "block/" + name(block.get()) + "_end"));
+
+						axisBlock(block.get(), model, model);
+						simpleBlockItem(block.get());
+					});
+		}
+
 		// Cinder Block Bricks
 		{
 			blockStairSlab(
@@ -399,11 +525,11 @@ public class FactoryMadeBlockStateProvider extends BlockStateProvider {
 	}
 
 	private ResourceLocation registryName(final Block block) {
-		return Preconditions.checkNotNull(ModRegistryUtil.getKey(block), "Block %s has a null registry name", block);
+		return Preconditions.checkNotNull(RegistryUtil.getKey(block), "Block %s has a null registry name", block);
 	}
 
 	private ResourceLocation registryName(final Item item) {
-		return Preconditions.checkNotNull(ModRegistryUtil.getKey(item), "Item %s has a null registry name", item);
+		return Preconditions.checkNotNull(RegistryUtil.getKey(item), "Item %s has a null registry name", item);
 	}
 
 	private String name(final Block block) {

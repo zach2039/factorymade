@@ -1,3 +1,12 @@
+### v1.19-1.1.2-8
+
+ - Nerf output of metal blocks to 8 from 16
+ - Add Lead Grating
+ - Add Lead Non-slip Walkway
+ - Add Lead Plate
+ - Add Lead Truss
+ - Add item tags for blocks
+
 ### v1.19-1.1.1-7
 
  - Update to Forge 41.0.98 

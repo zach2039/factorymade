@@ -3,11 +3,9 @@ package com.zach2039.factorymade.util;
 import com.google.common.base.Preconditions;
 import com.zach2039.factorymade.FactoryMade;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.alchemy.Potion;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.IForgeRegistry;
@@ -23,7 +21,7 @@ import java.util.stream.StreamSupport;
  *
  * @author Choonster
  */
-public class ModRegistryUtil {
+public class RegistryUtil {
 	/**
 	 * Get all of this mod's registry entries from the provided registry.
 	 *

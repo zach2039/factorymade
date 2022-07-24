@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "factorymade:block/clean_lead_truss_end",
+    "east": "factorymade:block/clean_lead_truss_side_flipped",
+    "north": "factorymade:block/clean_lead_truss_side",
+    "particle": "factorymade:block/clean_lead_truss_end",
+    "south": "factorymade:block/clean_lead_truss_side",
+    "up": "factorymade:block/clean_lead_truss_end",
+    "west": "factorymade:block/clean_lead_truss_side_flipped"
+  }
+}

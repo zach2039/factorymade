@@ -1,7 +1,7 @@
 package com.zach2039.factorymade.data.loot;
 
 import com.zach2039.factorymade.init.ModBlocks;
-import com.zach2039.factorymade.util.ModRegistryUtil;
+import com.zach2039.factorymade.util.RegistryUtil;
 import net.minecraft.data.loot.BlockLoot;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -54,7 +54,48 @@ public class FactoryMadeBlockLootTables extends BlockLoot {
 		ModBlocks.IRON_TRUSS_BLOCKS.getBlocks().forEach(block -> {
 			dropSelf(block.get());
 		});
-		
+
+		// Lead Non-Slip Walkway
+		ModBlocks.LEAD_NON_SLIP_WALKWAY_BLOCKS.getBlocks().forEach(block -> {
+			dropSelf(block.get());
+		});
+		ModBlocks.LEAD_NON_SLIP_WALKWAY_STAIRS.getBlocks().forEach(block -> {
+			dropSelf(block.get());
+		});
+		ModBlocks.LEAD_NON_SLIP_WALKWAY_SLABS.getBlocks().forEach(block -> {
+			dropSelf(block.get());
+		});
+
+		// Lead Plate
+		ModBlocks.LEAD_PLATE_BLOCKS.getBlocks().forEach(block -> {
+			dropSelf(block.get());
+		});
+		ModBlocks.LEAD_PLATE_STAIRS.getBlocks().forEach(block -> {
+			dropSelf(block.get());
+		});
+		ModBlocks.LEAD_PLATE_SLABS.getBlocks().forEach(block -> {
+			dropSelf(block.get());
+		});
+
+		// Lead Grating
+		ModBlocks.LEAD_GRATING_BLOCKS.getBlocks().forEach(block -> {
+			dropSelf(block.get());
+		});
+		ModBlocks.LEAD_GRATING_STAIRS.getBlocks().forEach(block -> {
+			dropSelf(block.get());
+		});
+		ModBlocks.LEAD_GRATING_SLABS.getBlocks().forEach(block -> {
+			dropSelf(block.get());
+		});
+		ModBlocks.LEAD_GRATING_PANES.getBlocks().forEach(block -> {
+			dropSelf(block.get());
+		});
+
+		// Lead Truss
+		ModBlocks.LEAD_TRUSS_BLOCKS.getBlocks().forEach(block -> {
+			dropSelf(block.get());
+		});
+
 		dropSelf(ModBlocks.WHITE_CINDER_BLOCK_BRICKS.get());
 		dropSelf(ModBlocks.WHITE_CINDER_BLOCK_BRICKS_STAIRS.get());
 		dropSelf(ModBlocks.WHITE_CINDER_BLOCK_BRICKS_SLAB.get());
@@ -114,6 +155,6 @@ public class FactoryMadeBlockLootTables extends BlockLoot {
 
 	@Override
 	protected Iterable<Block> getKnownBlocks() {
-		return ModRegistryUtil.getModRegistryEntries(ForgeRegistries.BLOCKS);
+		return RegistryUtil.getModRegistryEntries(ForgeRegistries.BLOCKS);
 	}
 }
