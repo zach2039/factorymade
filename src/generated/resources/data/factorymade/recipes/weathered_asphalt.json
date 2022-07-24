@@ -1,0 +1,8 @@
+{
+  "type": "factorymade:industrial_shaper",
+  "count": 4,
+  "ingredient": {
+    "item": "minecraft:cobbled_deepslate"
+  },
+  "result": "factorymade:weathered_asphalt"
+}

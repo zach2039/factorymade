@@ -198,7 +198,19 @@ public class FactoryMadeRecipeProvider extends RecipeProvider {
 				);
 			});
 		}
-		
+
+		// Asphalt
+		{
+			ModBlocks.ASPHALT_BLOCKS.getBlocks().forEach(block -> {
+				addBlockStairSlab(recipeConsumer,
+						Blocks.COBBLED_DEEPSLATE,
+						block.get(), 4,
+						ModBlocks.ASPHALT_STAIRS.getBlock((SimpleConcreteBlockVariant) block.get().getType()).get(),
+						ModBlocks.ASPHALT_SLABS.getBlock((SimpleConcreteBlockVariant) block.get().getType()).get()
+				);
+			});
+		}
+
 		// Asbestos Tiles
 		{
 			ModBlocks.ASBESTOS_TILES_BLOCKS.getBlocks().forEach(block -> {

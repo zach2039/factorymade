@@ -439,7 +439,39 @@ public class FactoryMadeBlockStateProvider extends BlockStateProvider {
 						simpleBlockItem(block.get());
 					});
 		}
-		
+
+		// Asphalt
+		{
+			ModBlocks.ASPHALT_BLOCKS
+					.getBlocks()
+					.forEach(block -> {
+						simpleBlock(block.get());
+						simpleBlockItem(block.get());
+					});
+
+			ModBlocks.ASPHALT_STAIRS
+					.getBlocks()
+					.forEach(block -> {
+						ResourceLocation baseTexture = blockTexture(
+								ModBlocks.ASPHALT_BLOCKS.getBlock((SimpleConcreteBlockVariant) block.get().getType()).get()
+						);
+
+						stairsBlock(block.get(), baseTexture);
+						simpleBlockItem(block.get());
+					});
+
+			ModBlocks.ASPHALT_SLABS
+					.getBlocks()
+					.forEach(block -> {
+						ResourceLocation baseTexture = blockTexture(
+								ModBlocks.ASPHALT_BLOCKS.getBlock((SimpleConcreteBlockVariant) block.get().getType()).get()
+						);
+
+						slabBlock(block.get(), baseTexture, baseTexture);
+						simpleBlockItem(block.get());
+					});
+		}
+
 		// Asbestos Tiles
 		{
 			ModBlocks.ASBESTOS_TILES_BLOCKS

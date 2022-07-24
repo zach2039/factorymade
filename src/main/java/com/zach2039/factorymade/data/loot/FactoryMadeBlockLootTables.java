@@ -131,6 +131,17 @@ public class FactoryMadeBlockLootTables extends BlockLoot {
 			dropSelf(blockReg.get());
 		});
 
+		// Asphalt
+		ModBlocks.ASPHALT_BLOCKS.getBlocks().forEach(blockReg -> {
+			dropSelf(blockReg.get());
+		});
+		ModBlocks.ASPHALT_STAIRS.getBlocks().forEach(blockReg -> {
+			dropSelf(blockReg.get());
+		});
+		ModBlocks.ASPHALT_SLABS.getBlocks().forEach(blockReg -> {
+			dropSelf(blockReg.get());
+		});
+
 		// Asbestos Tiles
 		ModBlocks.ASBESTOS_TILES_BLOCKS.getBlocks().forEach(blockReg -> {
 			dropSelf(blockReg.get());

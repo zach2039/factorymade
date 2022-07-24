@@ -1,0 +1,8 @@
+{
+  "type": "factorymade:industrial_shaper",
+  "count": 2,
+  "ingredient": {
+    "item": "factorymade:weathered_asphalt"
+  },
+  "result": "factorymade:weathered_asphalt_slab"
+}

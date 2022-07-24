@@ -247,6 +247,27 @@ public class ModBlocks {
 			.slabFactory(VariantSlab::new)
 			.build();
 
+	// Asphalt
+	public static final BlockVariantGroup<SimpleConcreteBlockVariant, VariantBlock> ASPHALT_BLOCKS = BlockVariantGroup.Builder.<SimpleConcreteBlockVariant, VariantBlock>create(BLOCKS, ITEMS)
+			.groupName("asphalt")
+			.variants(SimpleConcreteBlockVariant.values())
+			.blockPropertiesFactory(state -> ModBlockProperties.CINDER_BLOCK_PROPS)
+			.blockFactory(VariantBlock::new)
+			.build();
+	public static final StairBlockVariantGroup<SimpleConcreteBlockVariant, VariantStair> ASPHALT_STAIRS = StairBlockVariantGroup.Builder.<SimpleConcreteBlockVariant, VariantStair>create(BLOCKS, ITEMS)
+			.groupName("asphalt_stairs")
+			.variants(SimpleConcreteBlockVariant.values())
+			.blockPropertiesFactory(state -> ModBlockProperties.CINDER_BLOCK_PROPS)
+			.blockStateProviderFactory(state -> () -> ModBlocks.ASPHALT_BLOCKS.getBlock(state).get().defaultBlockState())
+			.stairFactory(VariantStair::new)
+			.build();
+	public static final SlabBlockVariantGroup<SimpleConcreteBlockVariant, VariantSlab> ASPHALT_SLABS = SlabBlockVariantGroup.Builder.<SimpleConcreteBlockVariant, VariantSlab>create(BLOCKS, ITEMS)
+			.groupName("asphalt_slab")
+			.variants(SimpleConcreteBlockVariant.values())
+			.blockPropertiesFactory(state -> ModBlockProperties.CINDER_BLOCK_PROPS)
+			.slabFactory(VariantSlab::new)
+			.build();
+
 	// Asbestos Tiles
 	public static final BlockVariantGroup<DyeColor, VariantBlock> ASBESTOS_TILES_BLOCKS = BlockVariantGroup.Builder.<DyeColor, VariantBlock>create(BLOCKS, ITEMS)
 			.groupName("asbestos_tiles")

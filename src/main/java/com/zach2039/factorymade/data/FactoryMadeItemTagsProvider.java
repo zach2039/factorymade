@@ -67,6 +67,11 @@ public class FactoryMadeItemTagsProvider extends ItemTagsProvider {
 			concreteSidingBlocksAny.add(block.get().asItem());
 		});
 
+		final var asphaltBlocksAny = tag(ModTags.Items.ASPHALT_BLOCKS_ANY);
+		ModBlocks.ASPHALT_BLOCKS.getBlocks().forEach(block -> {
+			asphaltBlocksAny.add(block.get().asItem());
+		});
+
 		final var computerBlocksAny = tag(ModTags.Items.COMPUTER_BLOCKS_ANY);
 		ModBlocks.COMPUTER_BLOCKS.getBlocks().forEach(block -> {
 			computerBlocksAny.add(block.get().asItem());

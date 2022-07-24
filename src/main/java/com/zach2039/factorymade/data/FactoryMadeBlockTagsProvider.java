@@ -122,6 +122,17 @@ public class FactoryMadeBlockTagsProvider extends BlockTagsProvider {
 			pickaxeMinable.add(block.get());
 		});
 
+		// Asphalt
+		ModBlocks.ASPHALT_BLOCKS.getBlocks().forEach(block -> {
+			pickaxeMinable.add(block.get());
+		});
+		ModBlocks.ASPHALT_STAIRS.getBlocks().forEach(block -> {
+			pickaxeMinable.add(block.get());
+		});
+		ModBlocks.ASPHALT_SLABS.getBlocks().forEach(block -> {
+			pickaxeMinable.add(block.get());
+		});
+
 		// Asbestos Tiles
 		ModBlocks.ASBESTOS_TILES_BLOCKS.getBlocks().forEach(block -> {
 			pickaxeMinable.add(block.get());

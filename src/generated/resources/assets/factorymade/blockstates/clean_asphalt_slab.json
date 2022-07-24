@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "factorymade:block/clean_asphalt_slab"
+    },
+    "type=double": {
+      "model": "factorymade:block/clean_asphalt"
+    },
+    "type=top": {
+      "model": "factorymade:block/clean_asphalt_slab_top"
+    }
+  }
+}

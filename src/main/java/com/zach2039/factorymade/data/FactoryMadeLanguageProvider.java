@@ -232,6 +232,23 @@ public class FactoryMadeLanguageProvider extends LanguageProvider {
 			addBlock(block, prefix + "Concrete Siding Slab");
 		});
 
+		// Asphalt
+		ModBlocks.ASPHALT_BLOCKS.getBlocks().forEach(block -> {
+			String variantName = block.get().getType().getSerializedName();
+			String prefix = (!variantName.equals("clean")) ? ModStringUtil.capitalize(variantName + " ") : "";
+			addBlock(block, prefix + "Asphalt");
+		});
+		ModBlocks.ASPHALT_STAIRS.getBlocks().forEach(block -> {
+			String variantName = block.get().getType().getSerializedName();
+			String prefix = (!variantName.equals("clean")) ? ModStringUtil.capitalize(variantName + " ") : "";
+			addBlock(block, prefix + "Asphalt Stairs");
+		});
+		ModBlocks.ASPHALT_SLABS.getBlocks().forEach(block -> {
+			String variantName = block.get().getType().getSerializedName();
+			String prefix = (!variantName.equals("clean")) ? ModStringUtil.capitalize(variantName + " ") : "";
+			addBlock(block, prefix + "Asphalt Slab");
+		});
+
 		// Asbestos Tiles
 		ModBlocks.ASBESTOS_TILES_BLOCKS.getBlocks().forEach(blockReg -> {
 			String colorName = ModStringUtil.getColorName((DyeColor) blockReg.get().getType());

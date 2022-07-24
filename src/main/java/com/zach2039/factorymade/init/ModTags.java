@@ -37,6 +37,7 @@ public class ModTags {
 		public static final TagKey<Item> ASBESTOS_TILES_BLOCKS_ANY = tag("asbestos_tiles_blocks/any");
 		public static final TagKey<Item> CINDER_BLOCK_BRICKS_BLOCKS_ANY = tag("cinder_block_bricks_blocks/any");
 		public static final TagKey<Item> CONCRETE_SIDING_BLOCKS_ANY = tag("concrete_siding_blocks/any");
+		public static final TagKey<Item> ASPHALT_BLOCKS_ANY = tag("asphalt_blocks/any");
 		public static final TagKey<Item> COMPUTER_BLOCKS_ANY = tag("computer_blocks/any");
 
 		// Iron

@@ -5,6 +5,7 @@
  - Add Lead Non-slip Walkway
  - Add Lead Plate
  - Add Lead Truss
+ - Add Asphalt
  - Add item tags for blocks
 
 ### v1.19-1.1.1-7
